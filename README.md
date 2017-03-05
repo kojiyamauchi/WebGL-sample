@@ -1,2 +1,2 @@
-webGL Sample Repository<br>
-<http://kojiyamauchi.com/WebGL_sample>
+WebGL Sample Repository<br>
+<http://kojiyamauchi.com/webGL_sample>
