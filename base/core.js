@@ -23,14 +23,14 @@ var draw = function () {
     // Render Size Set.
     renderer.setSize(window.innerWidth, window.innerHeight);
     // Render BackGround Color.
-    renderer.setClearColor(0x000000, 0.5);
+    renderer.setClearColor(0x000000, 0);
     // Add Canvas to <body>.
     document.body.appendChild(renderer.domElement);
 
     // Create Box.
     var geometry = new THREE.BoxGeometry(0.75, 0.75, 0.75);
     var material = new THREE.MeshPhongMaterial({
-        color: 0x669900
+        color: 0x66CC00
     });
     var box = new THREE.Mesh(geometry, material);
     box.position.x = -1.25;
