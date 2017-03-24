@@ -274,3 +274,48 @@ body#sample1 div {
   z-index: -1;
   opacity: 0;
 }
+
+body#sample1 ul {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+body#sample1 ul li a {
+  color: #999 !important;
+  display: inline-block;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+body#sample1 ul li a span {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  display: inline-block;
+}
+
+body#sample1 ul li a:hover {
+  opacity: 0.75;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+body#sample1 ul li a:hover span {
+  -webkit-transform: rotate(-360deg);
+  -ms-transform: rotate(-360deg);
+  transform: rotate(-360deg);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+body#sample1 ul li:first-of-type {
+  margin: 0 0 15px;
+}
