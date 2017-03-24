@@ -77,4 +77,5 @@ jQuery(function ($) {
     });
 
     $('body#sample1').fadeTo(2000, 1);
+    $('body#sample1 div').delay(3000).fadeTo(3000, 1);
 });
