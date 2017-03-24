@@ -155,6 +155,6 @@ gulp.task("default", ["browserSync"], function () { // first task, local server 
     gulp.watch(noCompressionImagesFold, ["compressionImages"]); // watching noCompressionImages fold changed images, compression images.
     //gulp.watch("**/*", ["rename"]); // watching change's HTML flie. Rename PHP file.
     //gulp.watch("**/*", ["delete"]); // watching rename PHP file. delet HTML file.
-    gulp.watch(upLoadFile, ["ftpUpLoad"]); // watching file save's auto ftp upload.
+    //gulp.watch(upLoadFile, ["ftpUpLoad"]); // watching file save's auto ftp upload.
     gulp.watch(upLoadFile, ["localBrowserReload"]); // watching file save's local browser reload.
 });
