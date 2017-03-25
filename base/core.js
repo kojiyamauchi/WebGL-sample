@@ -77,5 +77,8 @@ jQuery(function ($) {
     });
 
     $('body#sample1').fadeTo(2000, 1);
+    setTimeout(function () {
+        $('body#sample1 ul li').addClass('rotate');
+    }, 3000);
     $('body#sample1 div').delay(3000).fadeTo(3000, 1);
 });

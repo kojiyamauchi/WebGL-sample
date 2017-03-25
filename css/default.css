@@ -281,6 +281,24 @@ body#sample1 ul {
   left: 15px;
 }
 
+body#sample1 ul li {
+  -webkit-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+body#sample1 ul li.rotate {
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
 body#sample1 ul li a {
   color: #999 !important;
   display: inline-block;
