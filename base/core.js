@@ -8,7 +8,7 @@ var draw = function () {
     // THREE.Scene(); => putiing objects.
     // THREE.PerspectiveCamera(); => photograph the object.
     // THREE.WebGLRenderer(); => render the camera.
-    // View => draw to the canvas.
+    // View => draw to the <canvas></canvas>.
 
     // Variable for Creating Object & Light Source.
     var scene = new THREE.Scene();
@@ -24,7 +24,7 @@ var draw = function () {
     renderer.setSize(window.innerWidth, window.innerHeight);
     // Render BackGround Color.
     renderer.setClearColor(0x000000, 0);
-    // Add Canvas to <body>.
+    // Add <canvas></canvas> into <body></body>.
     document.body.appendChild(renderer.domElement);
 
     // Create Box.
