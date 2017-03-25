@@ -10,13 +10,16 @@ var draw = function () {
     // THREE.WebGLRenderer(); => render the camera.
     // View => draw to the <canvas></canvas>.
 
+    // Temporary Canvas Size Variable.
+    // Actually, window.innerWidth & window.innerHeight.
+    var W = 1440,
+        H = 775;
+
     // Variable for Creating Object & Light Source.
     var scene = new THREE.Scene();
 
     // Variable for Creating Camera.
     //var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-    var W = 1440,
-        H = 775;
     var camera = new THREE.PerspectiveCamera(45, W / H, 0.1, 1000);
 
     // Variable for Creating WebGL Renderer.
@@ -25,8 +28,6 @@ var draw = function () {
     });
     // Render Size Set.
     //renderer.setSize(window.innerWidth, window.innerHeight);
-    var W = 1440,
-        H = 775;
     renderer.setSize(W, H);
     // Render BackGround Color.
     renderer.setClearColor(0x000000, 0);
