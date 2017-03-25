@@ -69,6 +69,13 @@ window.addEventListener('DOMContentLoaded', draw, false);
 var jQuery = require('jQuery');
 
 jQuery(function ($) {
+
+    var ua = navigator.userAgent,
+        replaceURL = 'http://kojiyamauchi.com/webGL_sample/sorry.html';
+    if(ua.indexOf("iPhone") > -1 || ua.indexOf("iPad") > -1 || ua.indexOf("iPod") > -1 || ua.indexOf("Android") > -1) {
+        window.location.href = replaceURL;
+    }
+
     if($('body').attr('id') === 'dummy') {
         $('canvas').hide();
     } else {
