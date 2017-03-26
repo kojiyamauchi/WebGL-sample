@@ -6,6 +6,7 @@ require('../tags/topList.tag');
 require('../tags/copyRight.tag');
 require('../tags/bg.tag');
 require('../tags/list.tag');
+require('../tags/sorry.tag');
 //require('../tags/default.tag');
 
 riot.mount('*');
@@ -88,13 +89,13 @@ var jQuery = require('jQuery');
 jQuery(function ($) {
 
     // If SP & Tablet Access, Replace UPL.
-    var ua = navigator.userAgent,
+    /*var ua = navigator.userAgent,
         replaceURL = 'http://kojiyamauchi.com/webGL_sample/sorry.html';
     if(ua.indexOf("iPhone") > -1 || ua.indexOf("iPad") > -1 || ua.indexOf("iPod") > -1 || ua.indexOf("Android") > -1) {
         window.location.href = replaceURL;
-    }
+    }*/
 
-    if($('body').attr('id') === 'list') {
+    if($('body').attr('id') === 'list' || $('body').attr('id') === 'sorry') {
         $('canvas').hide();
     } else {
         $('html').css({
@@ -102,7 +103,7 @@ jQuery(function ($) {
         });
     }
 
-    $('body#list h1 span').delay(250).each(function (index) {
+    $('body#list h1 span, body#sorry h1 span').delay(250).each(function (index) {
         $(this).delay(index * 50).queue(function () {
             $(this).addClass('down').dequeue();
         });
