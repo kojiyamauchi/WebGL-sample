@@ -89,11 +89,11 @@ var jQuery = require('jQuery');
 jQuery(function ($) {
 
     // If SP & Tablet Access, Replace UPL.
-    /*var ua = navigator.userAgent,
+    var ua = navigator.userAgent,
         replaceURL = 'http://kojiyamauchi.com/webGL_sample/sorry.html';
     if(ua.indexOf("iPhone") > -1 || ua.indexOf("iPad") > -1 || ua.indexOf("iPod") > -1 || ua.indexOf("Android") > -1) {
         window.location.href = replaceURL;
-    }*/
+    }
 
     if($('body').attr('id') === 'list' || $('body').attr('id') === 'sorry') {
         $('canvas').hide();
