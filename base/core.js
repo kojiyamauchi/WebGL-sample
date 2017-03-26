@@ -27,7 +27,7 @@ var draw = function () {
     // Temporary Canvas Size Variable.
     // Actually, window.innerWidth & window.innerHeight.
     var W = 1440,
-        H = 775;
+        H = 811;
 
     // Variable for Creating Object & Light Source.
     var scene = new THREE.Scene();
