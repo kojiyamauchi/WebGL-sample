@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
 /*------------------------------------------------------------------------------
  Reset & Default Setting CSS.
 ------------------------------------------------------------------------------*/
@@ -169,77 +171,7 @@ textarea {
 }
 /* Dummy.html */
 body {
-    &#dummy {
-        h1 {
-            text-align: center;
-            padding-top: 280px;
-
-            span {
-                font-size: 54px;
-                font-family: 'Source Sans Pro', sans-serif;
-                color: #999;
-                text-align: center;
-                font-weight: lighter;
-                display: inline-block;
-                transform: translate(0,0);
-                transition: all 0.5s;
-                opacity: 0;
-
-                &.down {
-                    opacity: 1;
-                    transform: translate(0,80%);
-                    transition: all 0.65s;
-                }
-            }
-        }
-
-        p {
-            text-align: center;
-            transform: translate(0,450%);
-
-            a {
-                color: #999 !important;
-                display: inline-block;
-                opacity: 1;
-                transition: opacity 0.5s;
-
-                span {
-                    transform: rotate(0deg);
-                    transition: transform 0.5s;
-                    display: inline-block;
-                }
-
-                &:hover {
-                    opacity: 0.75;
-                    transition: opacity 0.5s;
-                }
-            }
-
-            &:first-of-type {
-                margin: 0 0 15px;
-
-                a {
-                    &:hover {
-                        span {
-                            transform: rotate(360deg);
-                            transition: transform 0.5s;
-                        }
-                    }
-                }
-            }
-
-            &:last-of-type {
-                a {
-                    &:hover {
-                        span {
-                            transform: rotate(-360deg);
-                            transition: transform 0.5s;
-                        }
-                    }
-                }
-            }
-        }
-    }
+    &#list {}
 }
 /* sample1.html */
 body {
@@ -250,61 +182,5 @@ body {
         height: 775px;
         margin: 0 auto;
         opacity: 0;
-
-        div {
-            background-image: url("../images/bg.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            opacity: 0;
-        }
-
-        ul {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-
-            li {
-                transform: rotateX( 90deg );
-                transition: transform 0.5s;
-
-                &.rotate {
-                    transform: rotateX( 0deg );
-                    transition: transform 0.5s;
-                }
-
-                a {
-                    color: #999 !important;
-                    display: inline-block;
-                    opacity: 1;
-                    transition: opacity 0.5s;
-
-                    span {
-                        transform: rotate(0deg);
-                        transition: transform 0.5s;
-                        display: inline-block;
-                    }
-
-                    &:hover {
-                        opacity: 0.75;
-                        transition: opacity 0.5s;
-
-                        span {
-                            transform: rotate(-360deg);
-                            transition: transform 0.5s;
-                        }
-                    }
-                }
-
-                &:first-of-type {
-                    margin: 0 0 15px;
-                }
-            }
-        }
     }
 }

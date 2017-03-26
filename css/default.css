@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
 /*------------------------------------------------------------------------------
  Reset & Default Setting CSS.
 ------------------------------------------------------------------------------*/
@@ -165,91 +167,6 @@ textarea {
 }
 
 /* Dummy.html */
-body#dummy h1 {
-  text-align: center;
-  padding-top: 280px;
-}
-
-body#dummy h1 span {
-  font-size: 54px;
-  font-family: 'Source Sans Pro', sans-serif;
-  color: #999;
-  text-align: center;
-  font-weight: lighter;
-  display: inline-block;
-  -webkit-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  transform: translate(0, 0);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  opacity: 0;
-}
-
-body#dummy h1 span.down {
-  opacity: 1;
-  -webkit-transform: translate(0, 80%);
-  -ms-transform: translate(0, 80%);
-  transform: translate(0, 80%);
-  -webkit-transition: all 0.65s;
-  transition: all 0.65s;
-}
-
-body#dummy p {
-  text-align: center;
-  -webkit-transform: translate(0, 450%);
-  -ms-transform: translate(0, 450%);
-  transform: translate(0, 450%);
-}
-
-body#dummy p a {
-  color: #999 !important;
-  display: inline-block;
-  opacity: 1;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
-}
-
-body#dummy p a span {
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-  display: inline-block;
-}
-
-body#dummy p a:hover {
-  opacity: 0.75;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
-}
-
-body#dummy p:first-of-type {
-  margin: 0 0 15px;
-}
-
-body#dummy p:first-of-type a:hover span {
-  -webkit-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  transform: rotate(360deg);
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-}
-
-body#dummy p:last-of-type a:hover span {
-  -webkit-transform: rotate(-360deg);
-  -ms-transform: rotate(-360deg);
-  transform: rotate(-360deg);
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-}
-
 /* sample1.html */
 body {
   overflow: hidden;
@@ -260,80 +177,4 @@ body#sample1 {
   height: 775px;
   margin: 0 auto;
   opacity: 0;
-}
-
-body#sample1 div {
-  background-image: url("../images/bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  opacity: 0;
-}
-
-body#sample1 ul {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-}
-
-body#sample1 ul li {
-  -webkit-transform: rotateX(90deg);
-  transform: rotateX(90deg);
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-}
-
-body#sample1 ul li.rotate {
-  -webkit-transform: rotateX(0deg);
-  transform: rotateX(0deg);
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-}
-
-body#sample1 ul li a {
-  color: #999 !important;
-  display: inline-block;
-  opacity: 1;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
-}
-
-body#sample1 ul li a span {
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-  display: inline-block;
-}
-
-body#sample1 ul li a:hover {
-  opacity: 0.75;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
-}
-
-body#sample1 ul li a:hover span {
-  -webkit-transform: rotate(-360deg);
-  -ms-transform: rotate(-360deg);
-  transform: rotate(-360deg);
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-}
-
-body#sample1 ul li:first-of-type {
-  margin: 0 0 15px;
 }

@@ -1,5 +1,18 @@
-'use strict';
+// Riot JS Script. /////////////////////////////////////////////////////////////
+var riot = require('riot');
 
+require('../tags/heading.tag');
+require('../tags/topList.tag');
+require('../tags/copyRight.tag');
+require('../tags/bg.tag');
+require('../tags/list.tag');
+//require('../tags/default.tag');
+
+riot.mount('*');
+// Riot JS Script End. /////////////////////////////////////////////////////////////
+
+
+// Three JS Script. /////////////////////////////////////////////////////////////
 var THREE = require('three');
 
 var draw = function () {
@@ -64,19 +77,24 @@ var draw = function () {
 };
 
 window.addEventListener('DOMContentLoaded', draw, false);
+// Three JS Script End. /////////////////////////////////////////////////////////////
 
+
+// jQuery Script. /////////////////////////////////////////////////////////////
+'use strict';
 
 var jQuery = require('jQuery');
 
 jQuery(function ($) {
 
+    // If SP & Tablet Access, Replace UPL.
     var ua = navigator.userAgent,
         replaceURL = 'http://kojiyamauchi.com/webGL_sample/sorry.html';
     if(ua.indexOf("iPhone") > -1 || ua.indexOf("iPad") > -1 || ua.indexOf("iPod") > -1 || ua.indexOf("Android") > -1) {
         window.location.href = replaceURL;
     }
 
-    if($('body').attr('id') === 'dummy') {
+    if($('body').attr('id') === 'list') {
         $('canvas').hide();
     } else {
         $('html').css({
@@ -84,7 +102,7 @@ jQuery(function ($) {
         });
     }
 
-    $('body#dummy h1 span').delay(250).each(function (index) {
+    $('body#list h1 span').delay(250).each(function (index) {
         $(this).delay(index * 50).queue(function () {
             $(this).addClass('down').dequeue();
         });
@@ -92,7 +110,8 @@ jQuery(function ($) {
 
     $('body#sample1').fadeTo(2000, 1);
     setTimeout(function () {
-        $('body#sample1 ul li').addClass('rotate');
-        $('body#sample1 div').fadeTo(3000, 1);
+        $('body#sample1 list ul li').addClass('rotate');
+        $('body#sample1 bg').fadeTo(3000, 1);
     }, 3000);
 });
+// jQuery Script End. /////////////////////////////////////////////////////////////
