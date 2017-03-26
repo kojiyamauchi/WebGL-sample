@@ -92,9 +92,12 @@ jQuery(function ($) {
     var ua = navigator.userAgent,
         currentURL = location.href,
         replaceURL = 'http://kojiyamauchi.com/webGL_sample/sorry.html';
-    if(ua.indexOf('iPhone') > -1 || ua.indexOf('iPad') > -1 || ua.indexOf('iPod') > -1 || ua.indexOf('Android') > -1 && currentURL.indexOf('sorry.html') === -1) {
-        window.location.href = replaceURL;
+    if(ua.indexOf('iPhone') > -1 || ua.indexOf('iPad') > -1 || ua.indexOf('iPod') > -1 || ua.indexOf('Android') > -1) {
+        if(currentURL.indexOf('sorry.html') === -1) {
+            location.href = replaceURL;
+        }
     }
+
 
     if($('body').attr('id') === 'list' || $('body').attr('id') === 'sorry') {
         $('canvas').hide();
