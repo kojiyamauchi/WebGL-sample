@@ -3,8 +3,7 @@
 
       <!-- Insert Components / Layout -->
       <ul>
-        <li><a href="http://kojiyamauchi.com/webGL_sample/">Back <span>To</span> List.</a></li>
-        <li><a href="https://github.com/kojiyamauchi/WebGL_sample">Back  <span>To</span> GitHub.</a></li>
+        <li each={ lists }><a href="{ path }">{ course } <span>To</span> { target }</a></li>
       </ul>
       <!-- Insert Components End. -->
 
@@ -60,6 +59,16 @@
 
       <!-- JavaScript / Logic -->
       <script>
+      this.lists = [{
+        path: 'http://kojiyamauchi.com/webGL_sample/',
+        course: 'Back',
+        target: 'List.'
+      },
+      {
+        path: 'https://github.com/kojiyamauchi/WebGL_sample',
+        course: 'Back',
+        target: 'GitHub.'
+      }]
       </script>
       <!-- JavaScript End. -->
 

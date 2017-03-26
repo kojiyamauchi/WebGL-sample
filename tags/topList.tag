@@ -2,8 +2,7 @@
     <topList>
 
       <!-- Insert Components / Layout -->
-      <p><a href="http://kojiyamauchi.com/webGL_sample/sample1.html">Go <span>To</span> Sample1.</a></p>
-      <p><a href="https://github.com/kojiyamauchi/WebGL_sample">Back <span>To</span> GitHub.</a></p>
+      <p each={ lists }><a href="{ path }">{ course } <span>To</span> { target }</a></p>
       <!-- Insert Components End. -->
 
       <!-- CSS Definition. Using Sass. -->
@@ -13,7 +12,7 @@
         p {
             text-align: center;
             transform: translate(0,450%);
-            
+
             a {
                 color: #999 !important;
                 display: inline-block;
@@ -62,6 +61,20 @@
 
       <!-- JavaScript / Logic -->
       <script>
+      this.lists = [
+        {
+          path: 'http://kojiyamauchi.com/webGL_sample/sample1.html',
+          course: 'Go',
+          target: 'Sample1.'
+        },
+        {
+          path: 'https://github.com/kojiyamauchi/WebGL_sample',
+          course: 'Back',
+          target: 'GitHub.'
+
+        }
+      ]
+
       </script>
       <!-- JavaScript End. -->
 
