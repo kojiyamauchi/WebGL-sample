@@ -7,7 +7,7 @@
       <!-- CSS Definition. Using Sass. -->
       <style type="scss">
       :scope {
-        background-image: url("../images/bg.jpg");
+        background-image: url("images/bg.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
