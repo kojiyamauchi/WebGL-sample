@@ -90,8 +90,9 @@ jQuery(function ($) {
 
     // If SP & Tablet Access, Replace UPL.
     var ua = navigator.userAgent,
+        currentURL = location.href,
         replaceURL = 'http://kojiyamauchi.com/webGL_sample/sorry.html';
-    if(ua.indexOf("iPhone") > -1 || ua.indexOf("iPad") > -1 || ua.indexOf("iPod") > -1 || ua.indexOf("Android") > -1) {
+    if(ua.indexOf('iPhone') > -1 || ua.indexOf('iPad') > -1 || ua.indexOf('iPod') > -1 || ua.indexOf('Android') > -1 && currentURL.indexOf('sorry.html') === -1) {
         window.location.href = replaceURL;
     }
 
@@ -116,3 +117,4 @@ jQuery(function ($) {
     }, 3000);
 });
 // jQuery Script End. /////////////////////////////////////////////////////////////
+///
