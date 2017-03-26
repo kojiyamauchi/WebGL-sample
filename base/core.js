@@ -88,7 +88,7 @@ var jQuery = require('jQuery');
 
 jQuery(function ($) {
 
-    // If SP & Tablet Access, Replace UPL.
+    // If SP & Tablet Access, Replace URL.
     var ua = navigator.userAgent,
         currentURL = location.href,
         replaceURL = 'http://kojiyamauchi.com/webGL_sample/sorry.html';
