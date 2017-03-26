@@ -2,7 +2,7 @@
     <copyRight>
 
       <!-- Insert Components / Layout -->
-      <p>© All The Small Things, All Rights Reserved. </p>
+      <p>&copy; All The Small Things, All Rights Reserved. </p>
       <!-- Insert Components End. -->
 
       <!-- CSS Definition. Using Sass. -->
@@ -19,6 +19,13 @@
           font-size: 1.375em;
           padding: 0 0 4px 0;
         }
+        @media screen and (max-width: 991px) {
+          p {
+            font-size: 2em;
+            padding: 0 0 12px 0;
+          }
+        }
+
       }
       </style>
       <!-- CSS End. -->
