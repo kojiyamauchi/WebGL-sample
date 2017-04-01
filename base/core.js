@@ -46,7 +46,7 @@ var draw = function () {
     // Render BackGround Color.
     renderer.setClearColor(0x000000, 0);
     // Add <canvas></canvas> into <body></body>.
-    document.body.appendChild(renderer.domElement);
+    document.getElementById('sample1').appendChild(renderer.domElement);
 
     // Create Box.
     var geometry = new THREE.BoxGeometry(0.75, 0.75, 0.75);
@@ -99,9 +99,7 @@ jQuery(function ($) {
     }
 
 
-    if($('body').attr('id') === 'list' || $('body').attr('id') === 'sorry') {
-        $('canvas').hide();
-    } else {
+    if($('body').attr('id') !== 'list' && $('body').attr('id') !== 'sorry') {
         $('html').css({
             'background-color': '#000'
         });

@@ -63,7 +63,7 @@
       <script>
       this.lists = [
         {
-          path: 'http://kojiyamauchi.com/webGL_sample/sample1.html',
+          path: 'sample1.html',
           course: 'Go',
           target: 'Sample1.'
         },

@@ -60,7 +60,7 @@
       <!-- JavaScript / Logic -->
       <script>
       this.lists = [{
-        path: 'http://kojiyamauchi.com/webGL_sample/',
+        path: 'index.html',
         course: 'Back',
         target: 'List.'
       },
