@@ -39,7 +39,6 @@ jQuery(function ($) {
         }
     }
 
-
     if($('body').attr('id') !== 'list' && $('body').attr('id') !== 'sorry') {
         $('html').css({
             'background-color': '#000'
