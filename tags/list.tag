@@ -47,6 +47,9 @@
                             transition: transform 0.5s;
                         }
                     }
+                    &.textWhite {
+                      color: #fff !important;
+                    }
                 }
 
                 &:nth-last-of-type(2) {

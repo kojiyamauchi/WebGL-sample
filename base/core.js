@@ -45,6 +45,9 @@ jQuery(function ($) {
             'background-color': '#000'
         });
     }
+    if($('body').attr('id') === 'sample2') {
+        $('list a').addClass('textWhite');
+    }
 
     $('body#list h1 span, body#sorry h1 span').delay(250).each(function (index) {
         $(this).delay(index * 50).queue(function () {
