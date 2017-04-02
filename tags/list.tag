@@ -18,6 +18,7 @@
             li {
                 transform: rotateX( 90deg );
                 transition: transform 0.5s;
+                margin: 0 0 15px;
 
                 &.rotate {
                     transform: rotateX( 0deg );
@@ -26,6 +27,7 @@
 
                 a {
                     color: #999 !important;
+                    text-shadow: 1px 1px 1px #000;
                     display: inline-block;
                     opacity: 1;
                     transition: opacity 0.5s;
@@ -47,8 +49,8 @@
                     }
                 }
 
-                &:first-of-type {
-                    margin: 0 0 15px;
+                &:last-of-type {
+                    margin: 0;
                 }
             }
         }
@@ -60,6 +62,14 @@
       <!-- JavaScript / Logic -->
       <script>
       this.lists = [{
+        path: 'sample1.html',
+        course: 'Go',
+        target: 'Sample1.'
+      },{
+        path: 'sample2.html',
+        course: 'Go',
+        target: 'Sample2.'
+      },{
         path: 'index.html',
         course: 'Back',
         target: 'List.'

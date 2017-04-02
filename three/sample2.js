@@ -17,9 +17,13 @@ if(document.getElementById('sample2')) {
         var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
 
         // Variable for Creating WebGL Renderer.
-        var renderer = new THREE.WebGLRenderer();
+        var renderer = new THREE.WebGLRenderer({
+            alpha: true
+        });
         // Render Size Set.
         renderer.setSize(window.innerWidth, window.innerHeight);
+        // Render BackGround Color.
+        renderer.setClearColor(0x000000, 0);
         // Add Canvas to <body>.
         document.getElementById('sample2').appendChild(renderer.domElement);
 

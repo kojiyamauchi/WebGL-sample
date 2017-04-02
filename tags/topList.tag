@@ -12,6 +12,7 @@
         p {
             text-align: center;
             transform: translate(0,450%);
+            margin: 0 0 15px;
 
             a {
                 color: #999 !important;
@@ -32,7 +33,6 @@
             }
 
             &:first-of-type {
-                margin: 0 0 15px;
 
                 a {
                     &:hover {
@@ -45,6 +45,7 @@
             }
 
             &:last-of-type {
+              margin: 0;
                 a {
                     &:hover {
                         span {
@@ -66,6 +67,11 @@
           path: 'sample1.html',
           course: 'Go',
           target: 'Sample1.'
+        },
+        {
+          path: 'sample2.html',
+          course: 'Go',
+          target: 'Sample2.'
         },
         {
           path: 'https://github.com/kojiyamauchi/WebGL_sample',

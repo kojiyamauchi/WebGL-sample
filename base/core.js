@@ -4,7 +4,8 @@ var riot = require('riot');
 require('../tags/heading.tag');
 require('../tags/topList.tag');
 require('../tags/copyRight.tag');
-require('../tags/bg.tag');
+require('../tags/bg1.tag');
+require('../tags/bg2.tag');
 require('../tags/list.tag');
 require('../tags/sorry.tag');
 //require('../tags/default.tag');
@@ -51,10 +52,10 @@ jQuery(function ($) {
         });
     });
 
-    $('body#sample1').fadeTo(2000, 1);
+    $('body.sample').fadeTo(2000, 1);
     setTimeout(function () {
-        $('body#sample1 list ul li').addClass('rotate');
-        $('body#sample1 bg').fadeTo(3000, 1);
+        $('body.sample list ul li').addClass('rotate');
+        $('body.sample .bg').fadeTo(3000, 1);
     }, 3000);
 });
 // jQuery Script End. //////////////////////////////////////////////////////////
