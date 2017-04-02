@@ -20,8 +20,8 @@ var gulp = require("gulp"), // call gulp.
     sftp = require("gulp-sftp"), // sftp plugin.
     using_PHP_LocalServerConnect = require("gulp-connect-php"), // using php local server connect plugin.
     browserSync = require("browser-sync"), // local browser sync plugin.
-    upLoadFileWrite = (["index.php", "*.html", "css/*.css", "css/**/*", "css/*.css.map", "sass/*.scss", "js/*.js", "images/*", "font/*", "maps/*"]), // upload file write.
-    notUpLoadFileWrite = (["!**/.DS_Store", "!node_modules/**/*", "!main/", "!colorOfLife/", "!gulpfile.js", "!privatePortfolio/", "!README.md", "!sass/config.rb", "!sass/sass.command", "!studySpace/", "!work/!", "!jsSample/", "!base/"]), // don't upload file write.
+    upLoadFileWrite = (["*.html", "css/default.min.css", "js/core.min.js", "images/*"]), // upload file write.
+    notUpLoadFileWrite = ([]), // don't upload file write.
     upLoadFile = upLoadFileWrite.concat(notUpLoadFileWrite); //ftp upload file. variable upLoadFileWrite concatenate variable notUpLoadFileWrite.
 
 // Browserify.
@@ -147,7 +147,7 @@ gulp.task("ftpUpLoad", function () {
 
 // gulp default task, terminal command "gulp".
 gulp.task("default", ["browserSync"], function () { // first task, local server connect & local browser sync.
-    gulp.watch(["base/*", "tags/*"], ["browserify"]); // JS File Browserify.
+    gulp.watch(["base/*", "tags/*", 'three/*'], ["browserify"]); // JS File Browserify.
     gulp.watch("js/core.js", ["jsmin"]); // watching change's JS flie, File Compression.
     gulp.watch("sass/default.scss", ["sass"]); // watching sass file save's auto compile.
     gulp.watch("css/default.css", ["autoprefixer"]); // watching change's CSS flie. add vendor prefix automatically.
@@ -155,6 +155,6 @@ gulp.task("default", ["browserSync"], function () { // first task, local server 
     gulp.watch(noCompressionImagesFold, ["compressionImages"]); // watching noCompressionImages fold changed images, compression images.
     //gulp.watch("**/*", ["rename"]); // watching change's HTML flie. Rename PHP file.
     //gulp.watch("**/*", ["delete"]); // watching rename PHP file. delet HTML file.
-    //gulp.watch(upLoadFile, ["ftpUpLoad"]); // watching file save's auto ftp upload.
+    gulp.watch(upLoadFile, ["ftpUpLoad"]); // watching file save's auto ftp upload.
     gulp.watch(upLoadFile, ["localBrowserReload"]); // watching file save's local browser reload.
 });
