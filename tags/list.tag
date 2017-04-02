@@ -43,14 +43,30 @@
                         transition: opacity 0.5s;
 
                         span {
-                            transform: rotate(-360deg);
+                            transform: rotate(360deg);
                             transition: transform 0.5s;
                         }
                     }
                 }
 
+                &:nth-last-of-type(2) {
+                    &:hover {
+
+                        span {
+                            transform: rotate(-360deg);
+                            transition: transform 0.5s;
+                        }
+                    }
+                }
                 &:last-of-type {
-                    margin: 0;
+                  margin: 0;
+                    &:hover {
+
+                        span {
+                            transform: rotate(-360deg);
+                            transition: transform 0.5s;
+                        }
+                    }
                 }
             }
         }

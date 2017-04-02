@@ -32,17 +32,14 @@
                 }
             }
 
-            &:first-of-type {
-
-                a {
-                    &:hover {
-                        span {
-                            transform: rotate(360deg);
-                            transition: transform 0.5s;
-                        }
-                    }
-                }
-            }
+              a {
+                  &:hover {
+                      span {
+                          transform: rotate(360deg);
+                          transition: transform 0.5s;
+                      }
+                  }
+              }
 
             &:last-of-type {
               margin: 0;
