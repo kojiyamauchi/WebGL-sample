@@ -29,8 +29,6 @@
                     color: #999 !important;
                     text-shadow: 1px 1px 1px #000;
                     display: inline-block;
-                    opacity: 1;
-                    transition: opacity 0.5s;
 
                     span {
                         transform: rotate(0deg);
@@ -39,8 +37,6 @@
                     }
 
                     &:hover {
-                        opacity: 0.75;
-                        transition: opacity 0.5s;
 
                         span {
                             transform: rotate(360deg);

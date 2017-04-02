@@ -17,8 +17,6 @@
             a {
                 color: #999 !important;
                 display: inline-block;
-                opacity: 1;
-                transition: opacity 0.5s;
 
                 span {
                     transform: rotate(0deg);
@@ -27,8 +25,6 @@
                 }
 
                 &:hover {
-                    opacity: 0.75;
-                    transition: opacity 0.5s;
                 }
             }
 
