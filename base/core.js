@@ -2,8 +2,8 @@
 var riot = require('riot');
 
 require('../tags/heading.tag');
-require('../tags/topList.tag');
-require('../tags/copyRight.tag');
+require('../tags/top-list.tag');
+require('../tags/copy-right.tag');
 require('../tags/bg1.tag');
 require('../tags/bg2.tag');
 require('../tags/list.tag');
