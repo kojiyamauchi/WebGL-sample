@@ -1,9 +1,11 @@
-var THREE = require('three');
+var THREE = require('three'),
+    chroma = require('chroma-js');
 
 if(document.getElementById('sample2')) {
 
     var draw = function () {
 
+        var scale = chroma.scale(['#ffffff', '#7037e8', '#e8574d', '#459a16']);
         // WebGL - three.js Code.
         // THREE.Scene(); => putiing objects.
         // THREE.PerspectiveCamera(); => photograph the object.
@@ -26,7 +28,6 @@ if(document.getElementById('sample2')) {
         renderer.setClearColor(0x000000, 0);
         // Add Canvas to <body>.
         document.getElementById('sample2').appendChild(renderer.domElement);
-
 
     };
 
