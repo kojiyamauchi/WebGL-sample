@@ -80,11 +80,13 @@
         path: 'sample1.html',
         course: 'Go',
         target: 'Sample1.'
-      },{
+      },
+      {
         path: 'sample2.html',
         course: 'Go',
         target: 'Sample2.'
-      },{
+      },
+      {
         path: 'index.html',
         course: 'Back',
         target: 'List.'
