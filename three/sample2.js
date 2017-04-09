@@ -52,7 +52,7 @@ if(document.getElementById('sample2')) {
         */
 
         // Position and Point the Camera.
-        camera.position.set(0, -2.5, 40);
+        camera.position.set(2, -2.5, 40);
         camera.lookAt({
             x: 0,
             y: 0,
