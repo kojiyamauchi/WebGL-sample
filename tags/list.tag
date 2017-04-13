@@ -14,30 +14,33 @@
         top: 15px;
         left: 15px;
         ul {
-
             li {
                 transform: rotateX( 90deg );
                 transition: transform 0.5s;
                 margin: 0 0 15px;
-
+                @media screen and (max-width: 1024px) {
+                  margin: 0 0 5% 0;
+                }
                 &.rotate {
                     transform: rotateX( 0deg );
                     transition: transform 0.5s;
                 }
-
                 a {
                     color: #999 !important;
                     text-shadow: 1px 1px 1px #000;
                     display: inline-block;
-
+                    @media screen and (max-width: 1024px) {
+                      font-size: 2.75em;
+                    }
+                    @media screen and (orientation: landscape) {
+                      font-size: 2em;
+                    }
                     span {
                         transform: rotate(0deg);
                         transition: transform 0.5s;
                         display: inline-block;
                     }
-
                     &:hover {
-
                         span {
                             transform: rotate(360deg);
                             transition: transform 0.5s;
@@ -47,10 +50,8 @@
                       color: #fff !important;
                     }
                 }
-
                 &:nth-last-of-type(2) {
                     &:hover {
-
                         span {
                             transform: rotate(-360deg);
                             transition: transform 0.5s;
@@ -60,7 +61,6 @@
                 &:last-of-type {
                   margin: 0;
                     &:hover {
-
                         span {
                             transform: rotate(-360deg);
                             transition: transform 0.5s;
@@ -69,7 +69,6 @@
                 }
             }
         }
-
       }
       </style>
       <!-- CSS End. -->

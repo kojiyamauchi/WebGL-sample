@@ -12,31 +12,28 @@
         p {
             text-align: center;
             transform: translate(0,450%);
-            margin: 0 0 15px;
-
+            margin: 0 0 10px;
+            @media screen and (max-width: 1024px) {
+              margin: 0 0 2.5% 0;
+            }
             a {
                 color: #999 !important;
                 display: inline-block;
-
+                @media screen and (max-width: 1024px) {
+                  font-size: 2.125em;
+                }
                 span {
                     transform: rotate(0deg);
                     transition: transform 0.5s;
                     display: inline-block;
                 }
-
                 &:hover {
+                    span {
+                        transform: rotate(360deg);
+                        transition: transform 0.5s;
+                    }
                 }
             }
-
-              a {
-                  &:hover {
-                      span {
-                          transform: rotate(360deg);
-                          transition: transform 0.5s;
-                      }
-                  }
-              }
-
             &:last-of-type {
               margin: 0;
                 a {

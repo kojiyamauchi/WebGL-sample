@@ -18,14 +18,11 @@
           font-family: Lobster,cursive;
           font-size: 1.375em;
           padding: 0 0 4px 0;
-        }
-        @media screen and (max-width: 991px) {
-          p {
-            font-size: 2em;
-            padding: 0 0 12px 0;
+          @media screen and (max-width: 1024px) {
+              font-size: 3em;
+              padding: 0 0 20px 0;
           }
         }
-
       }
       </style>
       <!-- CSS End. -->

@@ -1,4 +1,17 @@
 @charset "UTF-8";
+/*==============================================================================
+
+ WebGL Sample sass & CSS.
+
+ - Import Google Web Font.
+ - Reset & Default Setting CSS.
+ - Paged CSS.
+ - Responsive Media Queries.
+
+==============================================================================*/
+/*------------------------------------------------------------------------------
+ Import Google Web Font.
+------------------------------------------------------------------------------*/
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300);
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 /*------------------------------------------------------------------------------
@@ -169,6 +182,9 @@ textarea {
     box-sizing: border-box;
     -ms-box-sizing: border-box;
 }
+/*------------------------------------------------------------------------------
+  Paged Setting.
+------------------------------------------------------------------------------*/
 /* Dummy.html */
 body {
     &#list {}
@@ -186,4 +202,38 @@ body {
         height: 811px;
         margin: 0 auto;
     }
+}
+/*------------------------------------------------------------------------------
+  Responsive Media Queries.
+------------------------------------------------------------------------------*/
+@media screen and (max-width:1024px) {
+    // iPad Pro.
+    body {
+        font-size: 100%;
+    }
+    @media screen and (orientation: landscape) {
+        body {
+            font-size: 75%;
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    // Tablet.
+    body {
+        font-size: 100%;
+    }
+    @media screen and (orientation: landscape) {
+        body {
+            font-size: 60%;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    // Smart Phone.
+}
+@media screen and (max-width:480px) {
+    // Small Smart Phone.
+}
+@media screen and (max-width:385px) {
+    // Extra Small Smart Phone.
 }

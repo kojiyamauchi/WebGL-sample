@@ -1,7 +1,10 @@
 var THREE = require('three'),
     chroma = require('chroma-js');
 
+
 if(document.getElementById('sample2')) {
+
+
 
     var draw = function () {
 
@@ -127,6 +130,17 @@ if(document.getElementById('sample2')) {
             requestAnimationFrame(render);
             renderer.render(scene, camera);
         }
+
+        // Responsive Function.
+        var windowResize = function () {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        };
+
+        // If Window Resize, Start Up windowResize();
+        window.addEventListener('resize', windowResize, false);
+
     };
 
     window.addEventListener('DOMContentLoaded', draw, false);

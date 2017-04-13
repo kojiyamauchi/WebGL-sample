@@ -11,10 +11,20 @@
         display: block;
         h1 {
             text-align: center;
-            padding-top: 280px;
-
+            padding-top: 240px;
+            @media screen and (max-width: 1024px) {
+              padding-top: 25%;
+              @media screen and (orientation: landscape) {
+                padding-top: 15%;
+              }
+            }
+            @media screen and (max-width: 991px) {
+              @media screen and (orientation: landscape) {
+                padding-top: 10%;
+              }
+            }
             span {
-                font-size: 54px;
+                font-size: 3.375em;
                 font-family: 'Source Sans Pro', sans-serif;
                 color: #999;
                 text-align: center;
@@ -23,6 +33,9 @@
                 transform: translate(0,0);
                 transition: all 0.5s;
                 opacity: 0;
+                @media screen and (max-width: 1024px) {
+                  font-size: 6.25em;
+                }
 
                 &.down {
                     opacity: 1;
