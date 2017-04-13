@@ -31,9 +31,9 @@
                     display: inline-block;
                     @media screen and (max-width: 1024px) {
                       font-size: 2.75em;
-                    }
-                    @media screen and (orientation: landscape) {
-                      font-size: 2em;
+                      @media screen and (orientation: landscape) {
+                        font-size: 2em;
+                      }
                     }
                     span {
                         transform: rotate(0deg);
