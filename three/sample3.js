@@ -16,11 +16,15 @@ if(document.getElementById('sample3')) {
         // Using chrome-js.
         //var scale = chroma.scale(['AddColor', 'AddColor', 'AddColor', 'AddColor']);
 
+        // Get <body></body> Width & Height.
+        var BW = document.body.clientWidth;
+        var BH = document.body.clientHeight;
+
         // Variable for Creating Object & Light Source.
         var scene = new THREE.Scene();
 
         // Variable for Creating Camera.
-        var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+        var camera = new THREE.PerspectiveCamera(45, BW / BH, 0.1, 1000);
 
         // Add Camera.
         scene.add(camera);
@@ -34,7 +38,7 @@ if(document.getElementById('sample3')) {
         renderer.setClearColor(0x000000, 0);
 
         // Render Size Set.
-        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setSize(BW, BH);
 
         // Renderer of Shadow Rendering Active.
         renderer.shadowMapEnabled = true;
@@ -125,9 +129,9 @@ if(document.getElementById('sample3')) {
 
         // Responsive Function.
         var windowResize = function () {
-            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.aspect = BW / BH;
             camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setSize(BW, BH);
         };
 
         // If Window Resize, Start Up windowResize();

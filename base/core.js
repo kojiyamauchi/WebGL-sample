@@ -66,5 +66,6 @@ jQuery(function ($) {
         $('body.sample list ul li').addClass('rotate');
         $('body.sample .bg').fadeTo(3000, 1);
     }, 3000);
+
 });
 // jQuery Script End. //////////////////////////////////////////////////////////
