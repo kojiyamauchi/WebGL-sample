@@ -17,11 +17,7 @@
         left: 0;
         z-index: -1;
         opacity: 0;
-        @media screen and (max-width:1024px) {
-            @media screen and (orientation: portrait) {
-              background-position: 50%,0;
-          }
-        }
+
       }
       </style>
       <!-- CSS End. -->

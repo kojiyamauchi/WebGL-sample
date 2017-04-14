@@ -1,6 +1,4 @@
-// Require three.js.
 var THREE = require('three'),
-    // Require Color JS Library.
     chroma = require('chroma-js');
 
 if(document.getElementById('sample3')) {
@@ -14,18 +12,11 @@ if(document.getElementById('sample3')) {
         // View => draw to the canvas.
 
         // Using chrome-js.
-        //var scale = chroma.scale(['AddColor', 'AddColor', 'AddColor', 'AddColor']);
-
-        // Get <body></body> Width & Height.
-        var BW = document.body.clientWidth,
-            BH = document.body.clientHeight;
-
+        var scale = chroma.scale(['#ffffff', '#7037e8', '#e8574d', '#459a16']);
         // Variable for Creating Object & Light Source.
         var scene = new THREE.Scene();
-
         // Variable for Creating Camera.
-        var camera = new THREE.PerspectiveCamera(45, BW / BH, 0.1, 1000);
-
+        var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
         // Add Camera.
         scene.add(camera);
 
@@ -36,44 +27,44 @@ if(document.getElementById('sample3')) {
 
         // Render BackGround Color.
         renderer.setClearColor(0x000000, 0);
-
         // Render Size Set.
-        renderer.setSize(BW, BH);
-
+        renderer.setSize(window.innerWidth, window.innerHeight);
         // Renderer of Shadow Rendering Active.
         renderer.shadowMapEnabled = true;
 
-        // create the ground plane
-        //var planeGeometry = new THREE.PlaneGeometry(60, 20, 1, 1);
-        //var planeMaterial = new THREE.MeshLambertMaterial({
-        //    color: 0xffffff,
-        //    transparent: true,
-        //    opacity: 1
-        //
-        //});
-        //var plane = new THREE.Mesh(planeGeometry, planeMaterial);
-        //plane.receiveShadow = true;
-
-        // rotate and position the plane
-        //plane.rotation.x = 0 * Math.PI;
-        //plane.position.x = 15;
-        //plane.position.y = 0;
-        //plane.position.z = 0;
-
-        // add the plane to the scene
-        //scene.add(plane);
+        // Variable for Creating Ground Plane.
+        // THREE.PlaneGeometry(); Argument => THREE.PlaneGeometry( width, height , widthSegments, heightSegments );
+        /*
+        var planeGeometry = new THREE.PlaneGeometry(,,,);
+        var planeMaterial = new THREE.MeshLambertMaterial({
+            color: Add Color
+        });
+        var plane = new THREE.Mesh(planeGeometry, planeMaterial);
+        // Plane Add Shadow.
+        plane.receiveShadow = true;
+        // Rotate and Position the Plane.
+        plane.rotation.x = ;
+        plane.position.x = ;
+        plane.position.y = ;
+        plane.position.z = ;
+        // Add Plane.
+        scene.add(plane);
+        */
 
         // Position and Point the Camera.
-        camera.position.x = -30;
-        camera.position.y = 50;
-        camera.position.z = -60;
-        camera.lookAt(scene.position);
+        camera.position.set(2, -2.5, 40);
+        camera.lookAt({
+            x: 0,
+            y: 0,
+            z: 5
+        });
 
-        // Create Sphere.
-        var sphereGeometry = new THREE.SphereGeometry(6, 50, 50);
+        // Add Sphere.
+        /*
+        var sphereGeometry = new THREE.SphereGeometry(1,50,50);
         var sphereMaterial = new THREE.MeshPhongMaterial(
         {
-            color: 0xFF99FF,
+            color: Add Color,
             transparent: true,
             opacity: 1
         });
@@ -81,59 +72,67 @@ if(document.getElementById('sample3')) {
         // Add Sphere Shadow;
         sphere.castShadow = true;
         // Rotate and Position the Sphere.
-        sphere.position.x = 1;
-        sphere.position.y = 1;
-        sphere.position.z = -10;
+        sphere.rotation.x = ;
+        sphere.position.x = ;
+        sphere.position.y = ;
+        sphere.position.z = ;
         // Add Sphere;
         scene.add(sphere);
+        */
 
-        // Create Box.
-        //var geometry = new THREE.BoxGeometry(0.75, 0.75, 0.75);
-        //var material = new THREE.MeshPhongMaterial({
-        //    color: 0x000000
-        //});
-        //var box = new THREE.Mesh(geometry, material);
-        //box.position.x = 1;
-        //box.position.y = 1;
-        //box.position.z = 1;
         // Add Box.
-        //scene.add(box);
+        var range = 2;
+        var stepX = 16;
+        var stepY = 6;
+        var stepZ = 12;
+        for(var i = -35; i < 5; i++) {
+            for(var j = -15; j < 15; j++) {
+                var box = new THREE.Mesh(new THREE.BoxGeometry(7.5, 7.5, 7.5),
+                    new THREE.MeshPhongMaterial(
+                    {
+                        color: scale(Math.random()).hex(),
+                        transparent: true,
+                        opacity: 1
 
-        // Add Subtle Ambient Lighting
-        var ambientLight = new THREE.AmbientLight(0x0c0c0c);
-        scene.add(ambientLight);
+                    }));
+                box.position.x = i * stepX + (Math.random() - 0.5) * range;
+                box.position.y = j * stepY + (Math.random() - 0.5) * range;
+                box.position.z = j * stepZ + (Math.random() - 0.5) * range;
+                box.castShadow = true;
+                scene.add(box);
+            }
+        }
 
-        // Add Spotlight for the Shadows
-        var spotLight = new THREE.SpotLight(0xffffff);
-        spotLight.position.set(20, 100, -100);
-        spotLight.castShadow = true;
-        scene.add(spotLight);
+        // Add Parallel Light Source.
+        var directionalLight = new THREE.DirectionalLight(0xffffff);
+        directionalLight.position.set(10, 10, 10);
+        scene.add(directionalLight);
 
         // Sort Added Scene.
         renderer.sortObjects = false;
 
         // Add Canvas to <body>.
         document.getElementById('sample3').appendChild(renderer.domElement);
-        var step = 0;
         render();
-        // Sphere Bounce Function.
-        function render() {
-            step += 0.03;
-            sphere.position.x = -30 + (40 * (Math.cos(step)));
-            sphere.position.y = -30 + (65 * Math.abs(Math.sin(step)));
 
-            // render using requestAnimationFrame
+        // Box Rotate Function.
+        function render() {
+            scene.traverse(function (e) {
+                if(e instanceof THREE.Mesh) {
+                    e.rotation.x += 0.02;
+                    e.rotation.y += 0.02;
+                    e.rotation.z += 0.02;
+                }
+            });
             requestAnimationFrame(render);
             renderer.render(scene, camera);
         }
 
         // Responsive Function.
         var windowResize = function () {
-            var BW = document.body.clientWidth,
-                BH = document.body.clientHeight;
-            camera.aspect = BW / BH;
+            camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
-            renderer.setSize(BW, BH);
+            renderer.setSize(window.innerWidth, window.innerHeight);
         };
 
         // If Window Resize, Start Up windowResize();
