@@ -32,25 +32,6 @@ if(document.getElementById('sample3')) {
         // Renderer of Shadow Rendering Active.
         renderer.shadowMapEnabled = true;
 
-        // Variable for Creating Ground Plane.
-        // THREE.PlaneGeometry(); Argument => THREE.PlaneGeometry( width, height , widthSegments, heightSegments );
-        /*
-        var planeGeometry = new THREE.PlaneGeometry(,,,);
-        var planeMaterial = new THREE.MeshLambertMaterial({
-            color: Add Color
-        });
-        var plane = new THREE.Mesh(planeGeometry, planeMaterial);
-        // Plane Add Shadow.
-        plane.receiveShadow = true;
-        // Rotate and Position the Plane.
-        plane.rotation.x = ;
-        plane.position.x = ;
-        plane.position.y = ;
-        plane.position.z = ;
-        // Add Plane.
-        scene.add(plane);
-        */
-
         // Position and Point the Camera.
         camera.position.set(2, -2.5, 40);
         camera.lookAt({
@@ -58,27 +39,6 @@ if(document.getElementById('sample3')) {
             y: 0,
             z: 5
         });
-
-        // Add Sphere.
-        /*
-        var sphereGeometry = new THREE.SphereGeometry(1,50,50);
-        var sphereMaterial = new THREE.MeshPhongMaterial(
-        {
-            color: Add Color,
-            transparent: true,
-            opacity: 1
-        });
-        var sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
-        // Add Sphere Shadow;
-        sphere.castShadow = true;
-        // Rotate and Position the Sphere.
-        sphere.rotation.x = ;
-        sphere.position.x = ;
-        sphere.position.y = ;
-        sphere.position.z = ;
-        // Add Sphere;
-        scene.add(sphere);
-        */
 
         // Add Box.
         var range = 2;

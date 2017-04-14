@@ -13,9 +13,6 @@ if(document.getElementById('sample2')) {
         // THREE.WebGLRenderer(); => render the camera.
         // View => draw to the canvas.
 
-        // Using chrome-js.
-        //var scale = chroma.scale(['AddColor', 'AddColor', 'AddColor', 'AddColor']);
-
         // Get <body></body> Width & Height.
         var BW = document.body.clientWidth,
             BH = document.body.clientHeight;
@@ -43,26 +40,6 @@ if(document.getElementById('sample2')) {
         // Renderer of Shadow Rendering Active.
         renderer.shadowMapEnabled = true;
 
-        // create the ground plane
-        //var planeGeometry = new THREE.PlaneGeometry(60, 20, 1, 1);
-        //var planeMaterial = new THREE.MeshLambertMaterial({
-        //    color: 0xffffff,
-        //    transparent: true,
-        //    opacity: 1
-        //
-        //});
-        //var plane = new THREE.Mesh(planeGeometry, planeMaterial);
-        //plane.receiveShadow = true;
-
-        // rotate and position the plane
-        //plane.rotation.x = 0 * Math.PI;
-        //plane.position.x = 15;
-        //plane.position.y = 0;
-        //plane.position.z = 0;
-
-        // add the plane to the scene
-        //scene.add(plane);
-
         // Position and Point the Camera.
         camera.position.x = -30;
         camera.position.y = 50;
@@ -86,18 +63,6 @@ if(document.getElementById('sample2')) {
         sphere.position.z = -10;
         // Add Sphere;
         scene.add(sphere);
-
-        // Create Box.
-        //var geometry = new THREE.BoxGeometry(0.75, 0.75, 0.75);
-        //var material = new THREE.MeshPhongMaterial({
-        //    color: 0x000000
-        //});
-        //var box = new THREE.Mesh(geometry, material);
-        //box.position.x = 1;
-        //box.position.y = 1;
-        //box.position.z = 1;
-        // Add Box.
-        //scene.add(box);
 
         // Add Subtle Ambient Lighting
         var ambientLight = new THREE.AmbientLight(0x0c0c0c);
