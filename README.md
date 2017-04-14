@@ -10,4 +10,7 @@ WebGL Sample Repository ( & Using Riot.js )<br>
 <http://kojiyamauchi.com/webGL_sample/sample1.html><br>
 <br>
 2.sample2.html =><br>
-<http://kojiyamauchi.com/webGL_sample/sample2.html>
+<http://kojiyamauchi.com/webGL_sample/sample2.html><br>
+<br>
+3.sample3.html =><br>
+<http://kojiyamauchi.com/webGL_sample/sample3.html><br>
