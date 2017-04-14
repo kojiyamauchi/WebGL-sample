@@ -95,10 +95,15 @@ if(document.getElementById('sample3')) {
         // Add Box.
         //scene.add(box);
 
-        // Add Parallel Light Source.
-        var directionalLight = new THREE.DirectionalLight(0xffffff);
-        directionalLight.position.set(150, 500, -300);
-        scene.add(directionalLight);
+        // Add Subtle Ambient Lighting
+        var ambientLight = new THREE.AmbientLight(0x0c0c0c);
+        scene.add(ambientLight);
+
+        // Add Spotlight for the Shadows
+        var spotLight = new THREE.SpotLight(0xffffff);
+        spotLight.position.set(20, 100, -100);
+        spotLight.castShadow = true;
+        scene.add(spotLight);
 
         // Sort Added Scene.
         renderer.sortObjects = false;
