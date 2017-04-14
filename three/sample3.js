@@ -73,7 +73,7 @@ if(document.getElementById('sample3')) {
         var sphereGeometry = new THREE.SphereGeometry(6, 50, 50);
         var sphereMaterial = new THREE.MeshPhongMaterial(
         {
-            color: 0xFF0066,
+            color: 0xFF99FF,
             transparent: true,
             opacity: 1
         });
