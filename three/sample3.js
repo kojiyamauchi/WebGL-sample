@@ -17,8 +17,8 @@ if(document.getElementById('sample3')) {
         //var scale = chroma.scale(['AddColor', 'AddColor', 'AddColor', 'AddColor']);
 
         // Get <body></body> Width & Height.
-        var BW = document.body.clientWidth;
-        var BH = document.body.clientHeight;
+        var BW = document.body.clientWidth,
+            BH = document.body.clientHeight;
 
         // Variable for Creating Object & Light Source.
         var scene = new THREE.Scene();
@@ -129,6 +129,8 @@ if(document.getElementById('sample3')) {
 
         // Responsive Function.
         var windowResize = function () {
+            var BW = document.body.clientWidth,
+                BH = document.body.clientHeight;
             camera.aspect = BW / BH;
             camera.updateProjectionMatrix();
             renderer.setSize(BW, BH);
