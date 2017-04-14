@@ -1,10 +1,7 @@
 var THREE = require('three'),
     chroma = require('chroma-js');
 
-
 if(document.getElementById('sample2')) {
-
-
 
     var draw = function () {
 
