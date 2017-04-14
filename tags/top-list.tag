@@ -64,6 +64,11 @@
           target: 'Sample2.'
         },
         {
+          path: 'sample3.html',
+          course: 'Go',
+          target: 'Sample3.'
+        },
+        {
           path: 'https://github.com/kojiyamauchi/WebGL_sample',
           course: 'Back',
           target: 'GitHub.'

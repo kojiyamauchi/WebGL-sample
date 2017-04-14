@@ -86,6 +86,11 @@
         target: 'Sample2.'
       },
       {
+        path: 'sample3.html',
+        course: 'Go',
+        target: 'Sample3.'
+      },
+      {
         path: 'index.html',
         course: 'Back',
         target: 'List.'
