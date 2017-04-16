@@ -31,15 +31,26 @@ var jQuery = require('jQuery');
 
 jQuery(function ($) {
 
+    // Global Variable.
+    var currentURL = location.href;
+
     // If Not Responsive Flie to SP & Tablet Access, Replace URL.
     var ua = navigator.userAgent,
-        currentURL = location.href,
         replaceURL = 'http://kojiyamauchi.com/webGL_sample/sorry.html';
     if(ua.indexOf('iPhone') > -1 || ua.indexOf('iPad') > -1 || ua.indexOf('iPod') > -1 || ua.indexOf('Android') > -1) {
         if($('body').hasClass('noSP')) {
             location.href = replaceURL;
         }
     }
+
+    // Link List Current Link Hide Function.
+    $('list a').each(function () {
+        var _this = $(this),
+            checkHref = _this.attr('href');
+        if(currentURL.indexOf(checkHref) > -1) {
+            _this.parent('li').hide();
+        }
+    });
 
     // WebGL Page is Background Color => #00000;
     if($('body').attr('id') !== 'list' && $('body').attr('id') !== 'sorry') {
