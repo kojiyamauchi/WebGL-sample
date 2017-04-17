@@ -106,6 +106,7 @@ if(document.getElementById('sample2')) {
 
     };
 
+    // Loaded All DOM. Start Up draw();
     window.addEventListener('DOMContentLoaded', draw, false);
 
 }

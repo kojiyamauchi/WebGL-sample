@@ -63,6 +63,7 @@ if(document.getElementById('sample1')) {
         update();
     };
 
+    // Loaded All DOM. Start Up draw();
     window.addEventListener('DOMContentLoaded', draw, false);
 
 }
