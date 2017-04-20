@@ -35,29 +35,38 @@ jQuery(function ($) {
     var currentURL = location.href;
 
     // If Not Responsive Flie to SP & Tablet Access, Replace URL.
-    var ua = navigator.userAgent,
-        replaceURL = 'http://kojiyamauchi.com/webGL_sample/sorry.html';
-    if(ua.indexOf('iPhone') > -1 || ua.indexOf('iPad') > -1 || ua.indexOf('iPod') > -1 || ua.indexOf('Android') > -1) {
-        if($('body').hasClass('noSP')) {
-            location.href = replaceURL;
+    function replaceURL() {
+        var ua = navigator.userAgent,
+            replaceURL = 'http://kojiyamauchi.com/webGL_sample/sorry.html';
+        if(ua.indexOf('iPhone') > -1 || ua.indexOf('iPad') > -1 || ua.indexOf('iPod') > -1 || ua.indexOf('Android') > -1) {
+            if($('body').hasClass('noSP')) {
+                location.href = replaceURL;
+            }
         }
     }
+    replaceURL();
 
     // Link List Current Link Hide Function.
-    $('list a').each(function () {
-        var _this = $(this),
-            checkHref = _this.attr('href');
-        if(currentURL.indexOf(checkHref) > -1) {
-            _this.parent('li').hide();
-        }
-    });
-
-    // WebGL Page is Background Color => #00000;
-    if($('body').attr('id') !== 'list' && $('body').attr('id') !== 'sorry') {
-        $('html').css({
-            'background-color': '#000'
+    function checkCurrent() {
+        $('list a').each(function () {
+            var _this = $(this),
+                checkHref = _this.attr('href');
+            if(currentURL.indexOf(checkHref) > -1) {
+                _this.parent('li').hide();
+            }
         });
     }
+    checkCurrent();
+
+    // WebGL Page is Background Color => #00000;
+    function addBGColor() {
+        if($('body').attr('id') !== 'list' && $('body').attr('id') !== 'sorry') {
+            $('html').css({
+                'background-color': '#000'
+            });
+        }
+    }
+    addBGColor();
 
     // Sample2.html List Font Color => #fffff;
     if($('body').attr('id') === 'sample2' || $('body').attr('id') === 'sample3') {
@@ -65,18 +74,24 @@ jQuery(function ($) {
     }
 
     // Heading1 Animations.
-    $('body#list h1 span, body#sorry h1 span').delay(250).each(function (index) {
-        $(this).delay(index * 50).queue(function () {
-            $(this).addClass('down').dequeue();
+    function headingDrop() {
+        $('body#list h1 span, body#sorry h1 span').delay(250).each(function (index) {
+            $(this).delay(index * 50).queue(function () {
+                $(this).addClass('down').dequeue();
+            });
         });
-    });
+    }
+    headingDrop();
 
     // Basic Animations.
-    $('body.sample').fadeTo(2000, 1);
-    setTimeout(function () {
-        $('body.sample list ul li').addClass('rotate');
-        $('body.sample .bg').fadeTo(3000, 1);
-    }, 3000);
+    function commonSlideIn() {
+        $('body.sample').fadeTo(2000, 1);
+        setTimeout(function () {
+            $('body.sample list ul li').addClass('rotate');
+            $('body.sample .bg').fadeTo(3000, 1);
+        }, 3000);
+    }
+    commonSlideIn();
 
 });
 // jQuery Script End. //////////////////////////////////////////////////////////
