@@ -68,10 +68,13 @@ jQuery(function ($) {
     }
     addBGColor();
 
-    // Sample2.html List Font Color => #fffff;
-    if($('body').attr('id') === 'sample2' || $('body').attr('id') === 'sample3') {
-        $('list a').addClass('textWhite');
+    // Sample2.html & Sample3.html List Font Color => #fffff;
+    function listFontColor() {
+        if($('body').attr('id') === 'sample2' || $('body').attr('id') === 'sample3') {
+            $('list a').addClass('textWhite');
+        }
     }
+    listFontColor();
 
     // Heading1 Animations.
     function headingDrop() {
