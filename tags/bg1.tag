@@ -10,7 +10,6 @@
         background-image: url("images/bg1.jpg");
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center;
         width: 100%;
         height: 100%;
         position: absolute;
