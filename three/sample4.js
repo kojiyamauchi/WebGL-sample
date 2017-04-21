@@ -79,7 +79,7 @@ if(document.getElementById('sample4')) {
         function render() {
             step += 0.03;
             sphere.position.y = -1.5 + (-0.5 * Math.abs(Math.sin(step)));
-            sphere.position.z = 23 + (13.7 * (Math.cos(step)));
+            sphere.position.z = 23.5 + (13.22 * (Math.cos(step)));
 
             // render using requestAnimationFrame
             requestAnimationFrame(render);
