@@ -7,6 +7,7 @@ require('../tags/copy-right.tag');
 require('../tags/bg1.tag');
 require('../tags/bg2.tag');
 require('../tags/bg3.tag');
+require('../tags/bg4.tag');
 require('../tags/list.tag');
 require('../tags/sorry.tag');
 //require('../tags/default.tag');
@@ -20,6 +21,7 @@ riot.mount('*');
 require('../three/sample1.js');
 require('../three/sample2.js');
 require('../three/sample3.js');
+require('../three/sample4.js');
 
 // Three JS Script End. ////////////////////////////////////////////////////////
 
@@ -70,7 +72,7 @@ jQuery(function ($) {
 
     // Sample2.html & Sample3.html List Font Color => #fffff;
     function listFontColor() {
-        if($('body').attr('id') === 'sample2' || $('body').attr('id') === 'sample3') {
+        if($('body').attr('id') === 'sample2' || $('body').attr('id') === 'sample3' || $('body').attr('id') === 'sample4') {
             $('list a').addClass('textWhite');
         }
     }
