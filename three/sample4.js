@@ -1,7 +1,5 @@
 // Require three.js.
-var THREE = require('three'),
-    // Require Color JS Library.
-    chroma = require('chroma-js');
+var THREE = require('three');
 
 if(document.getElementById('sample4')) {
 
@@ -16,9 +14,6 @@ if(document.getElementById('sample4')) {
         // Get <body></body> Width & Height.
         var BW = document.body.clientWidth,
             BH = document.body.clientHeight;
-
-        // Using chrome-js.
-        //var scale = chroma.scale(['AddColor', 'AddColor', 'AddColor', 'AddColor']);
 
         // Variable for Creating Object & Light Source.
         var scene = new THREE.Scene();
@@ -90,19 +85,6 @@ if(document.getElementById('sample4')) {
             requestAnimationFrame(render);
             renderer.render(scene, camera);
         }
-
-        // Box Rotate Function.
-        /*function render() {
-            scene.traverse(function (e) {
-                if(e instanceof THREE.Mesh) {
-                    e.rotation.x += 0.02;
-                    e.rotation.y += 0.02;
-                    e.rotation.z += 0.02;
-                }
-            });
-            requestAnimationFrame(render);
-            renderer.render(scene, camera);
-        }*/
 
         // Responsive Function.
         var windowResize = function () {
