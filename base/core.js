@@ -89,7 +89,7 @@ jQuery(function ($) {
     headingDrop();
 
     // Basic Animations.
-    function commonSlideIn() {
+    function commonFadeIn() {
         if($('body').attr('id') !== 'sample4') {
             $('body.sample').fadeTo(2000, 1);
             setTimeout(function () {
@@ -104,7 +104,7 @@ jQuery(function ($) {
             }, 3350);
         }
     }
-    commonSlideIn();
+    commonFadeIn();
 
 });
 // jQuery Script End. //////////////////////////////////////////////////////////
