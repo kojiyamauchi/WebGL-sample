@@ -96,8 +96,8 @@ jQuery(function ($) {
                 $('body.sample list ul li').addClass('rotate');
                 $('body.sample .bg').fadeTo(3000, 1);
             }, 3000);
-        } else {
-            $('body#sample4').fadeTo(2000, 1);
+        } else if($('body').attr('id') === 'sample4') {
+            $('body.sample').fadeTo(2000, 1);
             setTimeout(function () {
                 $('body.sample list ul li').addClass('rotate');
                 $('body.sample .bg').delay(1300).fadeTo(3000, 1);
