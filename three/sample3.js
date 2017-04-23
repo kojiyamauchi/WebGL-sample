@@ -33,7 +33,7 @@ if(document.getElementById('sample3')) {
         // Renderer of Shadow Rendering Active.
         renderer.shadowMapEnabled = true;
 
-        // Add AxisHelper. X Axis => Red Lines, Y Axis => Green Lines, Z Lines => Blue Lines, Argument => Line Length.
+        // Add AxisHelper. X-Axis => Red Lines, Y-Axis => Green Lines, Z-Axis => Blue Lines, Argument => Line Length.
         var axes = new THREE.AxisHelper(1000);
         scene.add(axes);
 

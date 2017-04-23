@@ -10,6 +10,7 @@ require('../tags/bg3.tag');
 require('../tags/bg4.tag');
 require('../tags/list.tag');
 require('../tags/sorry.tag');
+require('../tags/axis-helper.tag');
 //require('../tags/default.tag');
 
 riot.mount('*');
@@ -71,12 +72,12 @@ jQuery(function ($) {
     addBGColor();
 
     // Sample2.html & Sample3.html List Font Color => #fffff;
-    function listFontColor() {
+    function textWhite() {
         if($('body').attr('id') === 'sample2' || $('body').attr('id') === 'sample3' || $('body').attr('id') === 'sample4') {
-            $('list a').addClass('textWhite');
+            $('list a, axis-helper').addClass('textWhite');
         }
     }
-    listFontColor();
+    textWhite();
 
     // Heading1 Animations.
     function headingDrop() {
