@@ -20,12 +20,6 @@ if(document.getElementById('sample2')) {
         // Variable for Creating Object & Light Source.
         var scene = new THREE.Scene();
 
-        // Variable for Creating Camera.
-        var camera = new THREE.PerspectiveCamera(45, BW / BH, 0.1, 1000);
-
-        // Add Camera.
-        scene.add(camera);
-
         // Variable for Creating WebGL Renderer.
         var renderer = new THREE.WebGLRenderer({
             alpha: true
@@ -43,12 +37,6 @@ if(document.getElementById('sample2')) {
         // Add AxisHelper. X-Axis => Red Lines, Y-Axis => Green Lines, Z-Axis => Blue Lines, Argument => Line Length.
         var axes = new THREE.AxisHelper(1000);
         scene.add(axes);
-
-        // Position and Point the Camera.
-        camera.position.x = -30;
-        camera.position.y = 50;
-        camera.position.z = -60;
-        camera.lookAt(scene.position);
 
         // Create Sphere.
         var sphereGeometry = new THREE.SphereGeometry(6, 50, 50);
@@ -80,6 +68,15 @@ if(document.getElementById('sample2')) {
 
         // Sort Added Scene.
         renderer.sortObjects = false;
+
+        // Variable for Creating Camera.
+        var camera = new THREE.PerspectiveCamera(45, BW / BH, 0.1, 1000);
+
+        // Position and Point the Camera.
+        camera.position.x = -30;
+        camera.position.y = 50;
+        camera.position.z = -60;
+        camera.lookAt(scene.position);
 
         // Add Canvas to <body>.
         document.getElementById('sample2').appendChild(renderer.domElement);

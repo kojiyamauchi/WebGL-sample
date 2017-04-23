@@ -18,10 +18,6 @@ if(document.getElementById('sample1')) {
         // Variable for Creating Object & Light Source.
         var scene = new THREE.Scene();
 
-        // Variable for Creating Camera.
-        //var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-        var camera = new THREE.PerspectiveCamera(45, W / H, 0.1, 1000);
-
         // Variable for Creating WebGL Renderer.
         var renderer = new THREE.WebGLRenderer({
             alpha: true
@@ -31,6 +27,10 @@ if(document.getElementById('sample1')) {
         renderer.setSize(W, H);
         // Render BackGround Color.
         renderer.setClearColor(0x000000, 0);
+
+        // Variable for Creating Camera.
+        //var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+        var camera = new THREE.PerspectiveCamera(45, W / H, 0.1, 1000);
 
         // Add <canvas></canvas> into <body></body>.
         document.getElementById('sample1').appendChild(renderer.domElement);
