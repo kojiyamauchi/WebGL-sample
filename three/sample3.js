@@ -13,6 +13,7 @@ if(document.getElementById('sample3')) {
 
         // Using chrome-js.
         var scale = chroma.scale(['#ffffff', '#7037e8', '#e8574d', '#459a16']);
+
         // Variable for Creating Object & Light Source.
         var scene = new THREE.Scene();
         // Variable for Creating Camera.
@@ -31,6 +32,10 @@ if(document.getElementById('sample3')) {
         renderer.setSize(window.innerWidth, window.innerHeight);
         // Renderer of Shadow Rendering Active.
         renderer.shadowMapEnabled = true;
+
+        // Add AxisHelper. X Axis => Red Lines, Y Axis => Green Lines, Z Lines => Blue Lines, Argument => Line Length.
+        var axes = new THREE.AxisHelper(1000);
+        scene.add(axes);
 
         // Position and Point the Camera.
         camera.position.set(2, -2.5, 40);

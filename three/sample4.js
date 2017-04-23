@@ -38,6 +38,10 @@ if(document.getElementById('sample4')) {
         // Renderer of Shadow Rendering Active.
         renderer.shadowMapEnabled = true;
 
+        // Add AxisHelper. X Axis => Red Lines, Y Axis => Green Lines, Z Lines => Blue Lines, Argument => Line Length.
+        var axes = new THREE.AxisHelper(1000);
+        scene.add(axes);
+
         // Position and Point the Camera.
         camera.position.x = 1;
         camera.position.y = 1;

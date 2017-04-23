@@ -31,6 +31,11 @@ if(document.getElementById('sample1')) {
         renderer.setSize(W, H);
         // Render BackGround Color.
         renderer.setClearColor(0x000000, 0);
+
+        // Add AxisHelper. X Axis => Red Lines, Y Axis => Green Lines, Z Lines => Blue Lines, Argument => Line Length.
+        var axes = new THREE.AxisHelper(1000);
+        scene.add(axes);
+
         // Add <canvas></canvas> into <body></body>.
         document.getElementById('sample1').appendChild(renderer.domElement);
 
