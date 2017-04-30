@@ -3,14 +3,15 @@ var riot = require('riot');
 
 require('../tags/heading.tag');
 require('../tags/top-list.tag');
-require('../tags/copy-right.tag');
+require('../tags/list.tag');
 require('../tags/bg1.tag');
 require('../tags/bg2.tag');
 require('../tags/bg3.tag');
 require('../tags/bg4.tag');
-require('../tags/list.tag');
 require('../tags/sorry.tag');
 require('../tags/axis-helper.tag');
+require('../tags/copy-right.tag');
+require('../tags/stats.tag');
 //require('../tags/default.tag');
 
 riot.mount('*');
@@ -72,12 +73,12 @@ jQuery(function ($) {
     addBGColor();
 
     // Sample2.html & Sample3.html List Font Color => #fffff;
-    function textWhite() {
+    function addTextColor() {
         if($('body').attr('id') === 'sample2' || $('body').attr('id') === 'sample3' || $('body').attr('id') === 'sample4') {
             $('list a, axis-helper').addClass('textWhite');
         }
     }
-    textWhite();
+    addTextColor();
 
     // Heading1 Animations.
     function headingDrop() {

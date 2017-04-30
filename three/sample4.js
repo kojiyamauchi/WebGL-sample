@@ -3,7 +3,7 @@ var THREE = require('three'),
     // Require stats.js.
     Stats = require('stats.js'),
     // Require dat.GUI.
-    datGUI = require('dat-gui'),
+    datGUI = require('dat.gui'),
     // Require Color JS Library.
     chroma = require('chroma-js');
 
@@ -20,6 +20,9 @@ if(document.getElementById('sample4')) {
         // Get <body></body> Width & Height.
         var BW = document.body.clientWidth,
             BH = document.body.clientHeight;
+
+        // Add Stats.
+        var stats = initStats();
 
         // Variable for Creating Object & Light Source.
         var scene = new THREE.Scene();
@@ -80,10 +83,22 @@ if(document.getElementById('sample4')) {
 
         // Add Canvas to <body>.
         document.getElementById('sample4').appendChild(renderer.domElement);
-        var step = 0;
+
+        // Add dat.GUI.
+        //var controls = new function () {
+        //};
+
+        //var gui = new datGUI();
+
         render();
+
         // Sphere Bounce Function.
+        var step = 0;
+
         function render() {
+            // Stats Up Date.
+            stats.update();
+
             step += 0.03;
             sphere.position.y = -1.5 + (-0.5 * Math.abs(Math.sin(step)));
             sphere.position.z = 23.5 + (13.22 * (Math.cos(step)));
@@ -91,6 +106,18 @@ if(document.getElementById('sample4')) {
             // render using requestAnimationFrame
             requestAnimationFrame(render);
             renderer.render(scene, camera);
+        }
+
+        // Stats Function.
+        function initStats() {
+            var stats = new Stats();
+            // 0: fps, 1: ms
+            stats.setMode(0);
+            stats.domElement.style.position = 'absolute';
+            stats.domElement.style.left = '0px';
+            stats.domElement.style.top = '0px';
+            document.querySelector('stats').appendChild(stats.domElement);
+            return stats;
         }
 
         // Responsive Function.

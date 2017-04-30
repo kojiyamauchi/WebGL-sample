@@ -3,7 +3,7 @@ var THREE = require('three'),
     // Require stats.js.
     Stats = require('stats.js'),
     // Require dat.GUI.
-    datGUI = require('dat-gui'),
+    datGUI = require('dat.gui'),
     // Require Color JS Library.
     chroma = require('chroma-js');
 
@@ -42,6 +42,12 @@ if(document.getElementById('sample1')) {
         // Add <canvas></canvas> into <body></body>.
         document.getElementById('sample1').appendChild(renderer.domElement);
 
+        // Add dat.GUI.
+        //var controls = new function () {
+        //};
+
+        //var gui = new datGUI();
+
         // Create Box.
         var geometry = new THREE.BoxGeometry(0.75, 0.75, 0.75);
         var material = new THREE.MeshPhongMaterial({
@@ -69,6 +75,7 @@ if(document.getElementById('sample1')) {
             renderer.render(scene, camera);
         };
         update();
+
     };
 
     // Loaded All DOM. Start Up draw();
