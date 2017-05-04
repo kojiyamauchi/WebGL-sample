@@ -2,8 +2,6 @@
 var THREE = require('three'),
     // Require stats.js.
     Stats = require('stats.js'),
-    // Require dat.GUI.
-    //datGUI = require('dat.gui'),
     // Require Color JS Library.
     chroma = require('chroma-js');
 
@@ -88,7 +86,7 @@ if(document.getElementById('sample4')) {
         //var controls = new function () {
         //};
 
-        //var gui = new datGUI();
+        var gui = new dat.GUI();
 
         render();
 
