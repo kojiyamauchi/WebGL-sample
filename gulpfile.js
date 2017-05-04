@@ -1,7 +1,9 @@
 var gulp = require('gulp'), // call gulp.
     browserify = require('browserify'), // Require Browserify.
+    babelify = require('babelify'), // Require Babelify.
     riotify = require('riotify'), // Riot.js Compile.
     source = require('vinyl-source-stream'), // Need To Use Browserify.
+    concat = require('gulp-concat'), // JS File Concatenate.
     plumber = require('gulp-plumber'), // case, error task. don't stop watch plugin.
     sass = require('gulp-sass'), // sass file compile plugin.
     sourcemaps = require('gulp-sourcemaps'), // write sourcemaps.
@@ -28,14 +30,33 @@ var gulp = require('gulp'), // call gulp.
 gulp.task('browserify', function () {
     browserify({
             debug: true,
-            entries: ['base/core.js']
+            entries: ['base/core.js'],
         })
         .transform([riotify])
         .bundle()
         .on('error', function (err) {
             console.log('Error : ' + err.message);
         })
-        .pipe(source('core.js'))
+        .pipe(source('_core.js'))
+        .pipe(gulp.dest('js/'));
+});
+
+// JS File Concatenate..
+gulp.task('concat', function () {
+    return gulp.src(['plugins/*.js', 'js/_core.js'])
+        .pipe(concat('core.js'))
+        .pipe(gulp.dest('js/'));
+});
+
+// JS File Compression.
+gulp.task('jsmin', function () {
+    gulp.src('js/core.js')
+        .pipe(jsmin({
+            preserveComments: 'some'
+        }))
+        .pipe(rename({
+            suffix: '.min'
+        }))
         .pipe(gulp.dest('js/'));
 });
 
@@ -83,18 +104,6 @@ gulp.task('cssmin', function () {
             suffix: '.min'
         }))
         .pipe(gulp.dest('css/'));
-});
-
-// JS File Compression.
-gulp.task('jsmin', function () {
-    gulp.src('js/core.js')
-        .pipe(jsmin({
-            preserveComments: 'some'
-        }))
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(gulp.dest('js/'));
 });
 
 // HTML File Rename PHP File. Setting at The Work Start.
@@ -151,6 +160,7 @@ gulp.task('ftpUpLoad', function () {
 // gulp default task, terminal command 'gulp'.
 gulp.task('default', ['browserSync'], function () { // first task, local server connect & local browser sync.
     gulp.watch(['base/*', 'tags/*', 'three/*'], ['browserify']); // JS File Browserify.
+    gulp.watch(['js/_core.js'], ['concat']); // JS File Browserify.
     gulp.watch('js/core.js', ['jsmin']); // watching change's JS flie, File Compression.
     gulp.watch('sass/default.scss', ['sass']); // watching sass file save's auto compile.
     gulp.watch('css/default.css', ['autoprefixer']); // watching change's CSS flie. add vendor prefix automatically.
