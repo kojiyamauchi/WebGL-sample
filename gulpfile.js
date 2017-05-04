@@ -1,6 +1,5 @@
 var gulp = require('gulp'), // call gulp.
     browserify = require('browserify'), // Require Browserify.
-    babelify = require('babelify'), // Require Babelify.
     riotify = require('riotify'), // Riot.js Compile.
     source = require('vinyl-source-stream'), // Need To Use Browserify.
     concat = require('gulp-concat'), // JS File Concatenate.
@@ -160,7 +159,7 @@ gulp.task('ftpUpLoad', function () {
 // gulp default task, terminal command 'gulp'.
 gulp.task('default', ['browserSync'], function () { // first task, local server connect & local browser sync.
     gulp.watch(['base/*', 'tags/*', 'three/*'], ['browserify']); // JS File Browserify.
-    gulp.watch(['js/_core.js'], ['concat']); // JS File Browserify.
+    gulp.watch(['js/_core.js'], ['concat']); // JS File Concatenate.
     gulp.watch('js/core.js', ['jsmin']); // watching change's JS flie, File Compression.
     gulp.watch('sass/default.scss', ['sass']); // watching sass file save's auto compile.
     gulp.watch('css/default.css', ['autoprefixer']); // watching change's CSS flie. add vendor prefix automatically.
