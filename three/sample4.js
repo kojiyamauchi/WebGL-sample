@@ -83,10 +83,11 @@ if(document.getElementById('sample4')) {
         document.getElementById('sample4').appendChild(renderer.domElement);
 
         // Add dat.GUI.
-        //var controls = new function () {
-        //};
-
+        var controls = new function () {
+            this.bouncingSpeed = 0.03;
+        };
         var gui = new dat.GUI();
+        gui.add(controls, 'bouncingSpeed', 0, 0.08);
 
         render();
 
@@ -97,7 +98,7 @@ if(document.getElementById('sample4')) {
             // Stats Up Date.
             stats.update();
 
-            step += 0.03;
+            step += controls.bouncingSpeed;
             sphere.position.y = -1.5 + (-0.5 * Math.abs(Math.sin(step)));
             sphere.position.z = 23.5 + (13.22 * (Math.cos(step)));
 

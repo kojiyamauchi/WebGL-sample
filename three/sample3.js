@@ -86,10 +86,11 @@ if(document.getElementById('sample3')) {
         document.getElementById('sample3').appendChild(renderer.domElement);
 
         // Add dat.GUI.
-        //var controls = new function () {
-        //};
-
+        var controls = new function () {
+            this.rotationSpeed = 0.02;
+        };
         var gui = new dat.GUI();
+        gui.add(controls, 'rotationSpeed', 0, 0.1);
 
         render();
 
@@ -100,9 +101,9 @@ if(document.getElementById('sample3')) {
 
             scene.traverse(function (e) {
                 if(e instanceof THREE.Mesh) {
-                    e.rotation.x += 0.02;
-                    e.rotation.y += 0.02;
-                    e.rotation.z += 0.02;
+                    e.rotation.x += controls.rotationSpeed;
+                    e.rotation.y += controls.rotationSpeed;
+                    e.rotation.z += controls.rotationSpeed;
                 }
             });
             requestAnimationFrame(render);

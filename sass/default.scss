@@ -182,6 +182,10 @@ textarea {
     box-sizing: border-box;
     -ms-box-sizing: border-box;
 }
+/* dat.GUI Position Reset CSS. */
+.dg.a {
+    margin-right: 0 !important;
+}
 /*------------------------------------------------------------------------------
   Paged Setting.
 ------------------------------------------------------------------------------*/
