@@ -19,12 +19,10 @@ riot.mount('*');
 
 
 // Require Three JS Script. ////////////////////////////////////////////////////
-
 require('../three/sample1.js');
 require('../three/sample2.js');
 require('../three/sample3.js');
 require('../three/sample4.js');
-
 // Three JS Script End. ////////////////////////////////////////////////////////
 
 
@@ -35,78 +33,78 @@ var jQuery = require('jQuery');
 
 jQuery(function ($) {
 
-    // Global Variable.
-    var currentURL = location.href;
+  // Global Variable.
+  var currentURL = location.href;
 
-    // If Not Responsive Flie to SP & Tablet Access, Replace URL.
-    function replaceURL() {
-        var ua = navigator.userAgent,
-            replaceURL = 'http://kojiyamauchi.com/webGL_sample/sorry.html';
-        if(ua.indexOf('iPhone') > -1 || ua.indexOf('iPad') > -1 || ua.indexOf('iPod') > -1 || ua.indexOf('Android') > -1) {
-            if($('body').hasClass('noSP')) {
-                location.href = replaceURL;
-            }
-        }
+  // If Not Responsive Flie to SP & Tablet Access, Replace URL.
+  function replaceURL() {
+    var ua = navigator.userAgent,
+      replaceURL = 'http://kojiyamauchi.com/webGL_sample/sorry.html';
+    if(ua.indexOf('iPhone') > -1 || ua.indexOf('iPad') > -1 || ua.indexOf('iPod') > -1 || ua.indexOf('Android') > -1) {
+      if($('body').hasClass('noSP')) {
+        location.href = replaceURL;
+      }
     }
-    replaceURL();
+  }
+  replaceURL();
 
-    // Link List Current Link Hide Function.
-    function checkCurrent() {
-        $('list a').each(function () {
-            var _this = $(this),
-                checkHref = _this.attr('href');
-            if(currentURL.indexOf(checkHref) > -1) {
-                _this.parent('li').hide();
-            }
-        });
-    }
-    checkCurrent();
+  // Link List Current Link Hide Function.
+  function checkCurrent() {
+    $('list a').each(function () {
+      var _this = $(this),
+        checkHref = _this.attr('href');
+      if(currentURL.indexOf(checkHref) > -1) {
+        _this.parent('li').hide();
+      }
+    });
+  }
+  checkCurrent();
 
-    // WebGL Page is Background Color => #00000;
-    function addBGColor() {
-        if($('body').attr('id') !== 'list' && $('body').attr('id') !== 'sorry') {
-            $('html').css({
-                'background-color': '#000'
-            });
-        }
+  // WebGL Page is Background Color => #00000;
+  function addBGColor() {
+    if($('body').attr('id') !== 'list' && $('body').attr('id') !== 'sorry') {
+      $('html').css({
+        'background-color': '#000'
+      });
     }
-    addBGColor();
+  }
+  addBGColor();
 
-    // Sample2.html & Sample3.html List Font Color => #fffff;
-    function addTextColor() {
-        if($('body').attr('id') === 'sample2' || $('body').attr('id') === 'sample3' || $('body').attr('id') === 'sample4') {
-            $('list a, axis-helper').addClass('textWhite');
-        }
+  // Sample2.html & Sample3.html List Font Color => #fffff;
+  function addTextColor() {
+    if($('body').attr('id') === 'sample2' || $('body').attr('id') === 'sample3' || $('body').attr('id') === 'sample4') {
+      $('list a, axis-helper').addClass('textWhite');
     }
-    addTextColor();
+  }
+  addTextColor();
 
-    // Heading1 Animations.
-    function headingDrop() {
-        $('body#list h1 span, body#sorry h1 span').delay(250).each(function (index) {
-            $(this).delay(index * 50).queue(function () {
-                $(this).addClass('down').dequeue();
-            });
-        });
-    }
-    headingDrop();
+  // Heading1 Animations.
+  function headingDrop() {
+    $('body#list h1 span, body#sorry h1 span').delay(250).each(function (index) {
+      $(this).delay(index * 50).queue(function () {
+        $(this).addClass('down').dequeue();
+      });
+    });
+  }
+  headingDrop();
 
-    // Basic Animations.
-    function commonFadeIn() {
-        if($('body').attr('id') !== 'sample4') {
-            $('body.sample').fadeTo(2000, 1);
-            setTimeout(function () {
-                $('body.sample list ul li').addClass('rotate');
-                $('body.sample .bg').fadeTo(3000, 1);
-            }, 3000);
-        } else if($('body').attr('id') === 'sample4') {
-            $('body.sample').fadeTo(2000, 1);
-            setTimeout(function () {
-                $('body.sample list ul li').addClass('rotate');
-                $('body.sample .bg').delay(1300).fadeTo(3000, 1);
-            }, 3350);
-        }
+  // Basic Animations.
+  function commonFadeIn() {
+    if($('body').attr('id') !== 'sample4') {
+      $('body.sample').fadeTo(2000, 1);
+      setTimeout(function () {
+        $('body.sample list ul li').addClass('rotate');
+        $('body.sample .bg').fadeTo(3000, 1);
+      }, 3000);
+    } else if($('body').attr('id') === 'sample4') {
+      $('body.sample').fadeTo(2000, 1);
+      setTimeout(function () {
+        $('body.sample list ul li').addClass('rotate');
+        $('body.sample .bg').delay(1300).fadeTo(3000, 1);
+      }, 3350);
     }
-    commonFadeIn();
+  }
+  commonFadeIn();
 
 });
 // jQuery Script End. //////////////////////////////////////////////////////////
