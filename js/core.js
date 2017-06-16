@@ -145,7 +145,7 @@ dat.GUI=dat.gui.GUI=function(e,a,b,d,f,c,p,k,l,q,n,r,y,g,h){function t(a,c,b,e){
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 20);
+/******/ 	return __webpack_require__(__webpack_require__.s = 23);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -5618,7 +5618,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 }).call(this);
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(21)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24)(module)))
 
 /***/ }),
 /* 2 */
@@ -49371,7 +49371,7 @@ riot.tag2('bg4', '', 'bg4,[data-is="bg4"]{ background-image: url("images/bg4.jpg
 "use strict";
 /* WEBPACK VAR INJECTION */(function(riot) {
 
-riot.tag2('copy-right', '<p>&copy; <a href="http://kojiyamauchi.com" target="_blank">All The Small Things,</a> All Rights Reserved. </p>', 'copy-right,[data-is="copy-right"]{ display: block; width: 100%; text-align: center; position: absolute; bottom: 0; } copy-right p,[data-is="copy-right"] p{ color: #999; font-family: Lobster,cursive; font-size: 1.375em; padding: 0 0 4px 0; } @media screen and (max-width: 1024px) { copy-right p,[data-is="copy-right"] p{ font-size: 3em; padding: 0 0 20px 0; } } copy-right p a,[data-is="copy-right"] p a{ color: #999 !important; opacity: 1; transition: opacity 0.5s; } copy-right p a:hover,[data-is="copy-right"] p a:hover{ opacity: 0.75; transition: opacity 0.5s; }', '', function (opts) {});
+riot.tag2('bg5', '', 'bg5,[data-is="bg5"]{ background-image: url("images/bg5.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1; opacity: 0; }', 'class="{bg: true}"', function (opts) {});
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
@@ -49381,11 +49381,21 @@ riot.tag2('copy-right', '<p>&copy; <a href="http://kojiyamauchi.com" target="_bl
 "use strict";
 /* WEBPACK VAR INJECTION */(function(riot) {
 
-riot.tag2('heading', '<h1><span>S</span><span>t</span><span>u</span><span>d</span><span>y</span><span>i</span><span>n</span><span>g</span>&nbsp;&nbsp;<span>N</span><span>o</span><span>w</span><span>.</span></h1>', 'heading,[data-is="heading"]{ display: block; } heading h1,[data-is="heading"] h1{ text-align: center; padding-top: 240px; } @media screen and (max-width: 1024px) { heading h1,[data-is="heading"] h1{ padding-top: 25%; } } @media screen and (max-width: 1024px) and (orientation: landscape) { heading h1,[data-is="heading"] h1{ padding-top: 15%; } } @media screen and (max-width: 991px) and (orientation: landscape) { heading h1,[data-is="heading"] h1{ padding-top: 10%; } } heading h1 span,[data-is="heading"] h1 span{ font-size: 3.375em; font-family: \'Source Sans Pro\', sans-serif; color: #999; text-align: center; font-weight: lighter; display: inline-block; transform: translate(0, 0); transition: all 0.5s; opacity: 0; } @media screen and (max-width: 1024px) { heading h1 span,[data-is="heading"] h1 span{ font-size: 6.25em; } } heading h1 span.down,[data-is="heading"] h1 span.down{ opacity: 1; transform: translate(0, 80%); transition: all 0.65s; }', '', function (opts) {});
+riot.tag2('copy-right', '<p>&copy; <a href="http://kojiyamauchi.com" target="_blank">All The Small Things,</a> All Rights Reserved. </p>', 'copy-right,[data-is="copy-right"]{ display: block; width: 100%; text-align: center; position: absolute; bottom: 0; } copy-right p,[data-is="copy-right"] p{ color: #999; font-family: Lobster,cursive; font-size: 1.375em; padding: 0 0 4px 0; } @media screen and (max-width: 1024px) { copy-right p,[data-is="copy-right"] p{ font-size: 3em; padding: 0 0 20px 0; } } copy-right p a,[data-is="copy-right"] p a{ color: #999 !important; opacity: 1; transition: opacity 0.5s; } copy-right p a:hover,[data-is="copy-right"] p a:hover{ opacity: 0.75; transition: opacity 0.5s; }', '', function (opts) {});
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(riot) {
+
+riot.tag2('heading', '<h1><span>S</span><span>t</span><span>u</span><span>d</span><span>y</span><span>i</span><span>n</span><span>g</span>&nbsp;&nbsp;<span>N</span><span>o</span><span>w</span><span>.</span></h1>', 'heading,[data-is="heading"]{ display: block; } heading h1,[data-is="heading"] h1{ text-align: center; padding-top: 240px; } @media screen and (max-width: 1024px) { heading h1,[data-is="heading"] h1{ padding-top: 25%; } } @media screen and (max-width: 1024px) and (orientation: landscape) { heading h1,[data-is="heading"] h1{ padding-top: 15%; } } @media screen and (max-width: 991px) and (orientation: landscape) { heading h1,[data-is="heading"] h1{ padding-top: 10%; } } heading h1 span,[data-is="heading"] h1 span{ font-size: 3.375em; font-family: \'Source Sans Pro\', sans-serif; color: #999; text-align: center; font-weight: lighter; display: inline-block; transform: translate(0, 0); transition: all 0.5s; opacity: 0; } @media screen and (max-width: 1024px) { heading h1 span,[data-is="heading"] h1 span{ font-size: 6.25em; } } heading h1 span.down,[data-is="heading"] h1 span.down{ opacity: 1; transform: translate(0, 80%); transition: all 0.65s; }', '', function (opts) {});
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49409,33 +49419,9 @@ riot.tag2('list', '<ul> <li each="{lists}"><a href="{path}">{course} <span>To</s
     course: 'Go',
     target: 'Sample4.'
   }, {
-    path: 'index.html',
-    course: 'Back',
-    target: 'List.'
-  }, {
-    path: 'https://github.com/kojiyamauchi/WebGL_sample',
-    course: 'Back',
-    target: 'GitHub.'
-  }];
-});
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(riot) {
-
-riot.tag2('sorry', '<h1><span>S</span><span>o</span><span>r</span><span>r</span><span>y</span><span>,</span>&nbsp;&nbsp;<span>P</span><span>C</span>&nbsp;&nbsp;<span>O</span><span>n</span><span>l</span><span>y</span><span>.</span></h1> <p each="{lists}"><a href="{path}">{course} <span>To</span> {target}</a></p>', 'sorry,[data-is="sorry"]{ display: block; } sorry h1,[data-is="sorry"] h1{ text-align: center; padding-top: 240px; } @media screen and (max-width: 1024px) { sorry h1,[data-is="sorry"] h1{ padding-top: 25%; } } @media screen and (max-width: 1024px) and (orientation: landscape) { sorry h1,[data-is="sorry"] h1{ padding-top: 15%; } } @media screen and (max-width: 991px) and (orientation: landscape) { sorry h1,[data-is="sorry"] h1{ padding-top: 10%; } } sorry h1 span,[data-is="sorry"] h1 span{ font-size: 3.375em; font-family: \'Source Sans Pro\', sans-serif; color: #999; text-align: center; font-weight: lighter; display: inline-block; transform: translate(0, 0); transition: all 0.5s; opacity: 0; } @media screen and (max-width: 1024px) { sorry h1 span,[data-is="sorry"] h1 span{ font-size: 6.25em; } } sorry h1 span.down,[data-is="sorry"] h1 span.down{ opacity: 1; transform: translate(0, 80%); transition: all 0.65s; } sorry p,[data-is="sorry"] p{ text-align: center; transform: translate(0, 450%); margin: 0 0 10px 0; } @media screen and (max-width: 1024px) { sorry p,[data-is="sorry"] p{ margin: 0 0 2.5% 0; } } sorry p a,[data-is="sorry"] p a{ color: #999 !important; font-size: 1em; display: inline-block; } @media screen and (max-width: 1024px) { sorry p a,[data-is="sorry"] p a{ font-size: 2.125em; } }', '', function (opts) {
-  this.lists = [{
-    path: 'sample2.html',
+    path: 'sample5.html',
     course: 'Go',
-    target: 'Sample2.'
-  }, {
-    path: 'sample3.html',
-    course: 'Go',
-    target: 'Sample3.'
+    target: 'Sample5.'
   }, {
     path: 'index.html',
     course: 'Back',
@@ -49455,11 +49441,57 @@ riot.tag2('sorry', '<h1><span>S</span><span>o</span><span>r</span><span>r</span>
 "use strict";
 /* WEBPACK VAR INJECTION */(function(riot) {
 
-riot.tag2('stats', '', 'stats,[data-is="stats"]{ width: 80px; height: 48px; position: absolute; left: 0; bottom: 0; }', '', function (opts) {});
+riot.tag2('not-completed', '<p>Not Completed!!!</p>', 'not-completed,[data-is="not-completed"]{ position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: 0; display: flex; justify-content: center; align-items: center; } not-completed p,[data-is="not-completed"] p{ font-size: 5em; font-weight: bold; color: #fff; text-shadow: 5px 5px 3px #000; } @media screen and (max-width: 1024px) { not-completed p,[data-is="not-completed"] p{ font-size: 6.5em; } } @media screen and (max-width: 1024px) and (orientation: landscape) { not-completed p,[data-is="not-completed"] p{ font-size: 7.5em; } }', '', function (opts) {});
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 /* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(riot) {
+
+riot.tag2('sorry', '<h1><span>S</span><span>o</span><span>r</span><span>r</span><span>y</span><span>,</span>&nbsp;&nbsp;<span>P</span><span>C</span>&nbsp;&nbsp;<span>O</span><span>n</span><span>l</span><span>y</span><span>.</span></h1> <p each="{lists}"><a href="{path}">{course} <span>To</span> {target}</a></p>', 'sorry,[data-is="sorry"]{ display: block; } sorry h1,[data-is="sorry"] h1{ text-align: center; padding-top: 240px; } @media screen and (max-width: 1024px) { sorry h1,[data-is="sorry"] h1{ padding-top: 25%; } } @media screen and (max-width: 1024px) and (orientation: landscape) { sorry h1,[data-is="sorry"] h1{ padding-top: 15%; } } @media screen and (max-width: 991px) and (orientation: landscape) { sorry h1,[data-is="sorry"] h1{ padding-top: 10%; } } sorry h1 span,[data-is="sorry"] h1 span{ font-size: 3.375em; font-family: \'Source Sans Pro\', sans-serif; color: #999; text-align: center; font-weight: lighter; display: inline-block; transform: translate(0, 0); transition: all 0.5s; opacity: 0; } @media screen and (max-width: 1024px) { sorry h1 span,[data-is="sorry"] h1 span{ font-size: 6.25em; } } sorry h1 span.down,[data-is="sorry"] h1 span.down{ opacity: 1; transform: translate(0, 80%); transition: all 0.65s; } sorry p,[data-is="sorry"] p{ text-align: center; transform: translate(0, 450%); margin: 0 0 10px 0; } @media screen and (max-width: 1024px) { sorry p,[data-is="sorry"] p{ margin: 0 0 2.5% 0; } } sorry p a,[data-is="sorry"] p a{ color: #999 !important; font-size: 1em; display: inline-block; } @media screen and (max-width: 1024px) { sorry p a,[data-is="sorry"] p a{ font-size: 2.125em; } }', '', function (opts) {
+  this.lists = [{
+    path: 'sample2.html',
+    course: 'Go',
+    target: 'Sample2.'
+  }, {
+    path: 'sample3.html',
+    course: 'Go',
+    target: 'Sample3.'
+  }, {
+    path: 'sample4.html',
+    course: 'Go',
+    target: 'Sample4.'
+  }, {
+    path: 'sample5.html',
+    course: 'Go',
+    target: 'Sample5.'
+  }, {
+    path: 'index.html',
+    course: 'Back',
+    target: 'List.'
+  }, {
+    path: 'https://github.com/kojiyamauchi/WebGL_sample',
+    course: 'Back',
+    target: 'GitHub.'
+  }];
+});
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(riot) {
+
+riot.tag2('stats', '', 'stats,[data-is="stats"]{ width: 80px; height: 48px; position: absolute; left: 0; bottom: 0; }', '', function (opts) {});
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49483,6 +49515,10 @@ riot.tag2('top-list', '<p each="{lists}"><a href="{path}">{course} <span>To</spa
     course: 'Go',
     target: 'Sample4.'
   }, {
+    path: 'sample5.html',
+    course: 'Go',
+    target: 'Sample5.'
+  }, {
     path: 'https://github.com/kojiyamauchi/WebGL_sample',
     course: 'Back',
     target: 'GitHub.'
@@ -49492,7 +49528,7 @@ riot.tag2('top-list', '<p each="{lists}"><a href="{path}">{course} <span>To</spa
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 15 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49582,7 +49618,7 @@ if (document.getElementById('sample1')) {
 }
 
 /***/ }),
-/* 16 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49732,7 +49768,7 @@ if (document.getElementById('sample2')) {
 }
 
 /***/ }),
-/* 17 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -49878,7 +49914,7 @@ if (document.getElementById('sample3')) {
 }
 
 /***/ }),
-/* 18 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50024,7 +50060,195 @@ if (document.getElementById('sample4')) {
 }
 
 /***/ }),
-/* 19 */
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Require three.js.
+var THREE = __webpack_require__(3),
+
+// Require stats.js.
+Stats = __webpack_require__(2),
+
+// Require Color JS Library.
+chroma = __webpack_require__(1);
+
+if (document.getElementById('sample5')) {
+
+  var draw = function draw() {
+
+    // WebGL - three.js Code.
+    // THREE.Scene(); => putiing objects.
+    // THREE.PerspectiveCamera(); => photograph the object.
+    // THREE.WebGLRenderer(); => render the camera.
+    // View => draw to the canvas.
+
+    // Get <body></body> Width & Height.
+    var BW = document.body.clientWidth,
+        BH = document.body.clientHeight;
+
+    // Using chrome-js.
+    var scale = chroma.scale(['#adc851', '#feda3f', '#8141bf', '#1f6931', '#346ac6', '#e8574d']);
+
+    // Add Stats.
+    var stats = initStats();
+
+    // Variable for Creating Object & Light Source.
+    var scene = new THREE.Scene();
+
+    // Variable for Creating WebGL Renderer.
+    var renderer = new THREE.WebGLRenderer({
+      alpha: true
+    });
+
+    // Render BackGround Color.
+    renderer.setClearColor(0x000000, 0);
+
+    // Render Size Set.
+    renderer.setSize(BW, BH);
+
+    // Renderer of Shadow Rendering Active.
+    renderer.shadowMapEnabled = true;
+
+    // Add AxisHelper. X-Axis => Red Lines, Y-Axis => Green Lines, Z-Axis => Blue Lines, Argument => Line Length.
+    var axes = new THREE.AxisHelper(1000);
+    scene.add(axes);
+
+    // Variable for Creating Ground Plane.
+    // THREE.PlaneGeometry(); Argument => THREE.PlaneGeometry( width, height , widthSegments, heightSegments );
+    var planeGeometry = new THREE.PlaneGeometry(1, 1, 1, 1);
+    var planeMaterial = new THREE.MeshLambertMaterial({
+      color: 0x000000
+    });
+    var plane = new THREE.Mesh(planeGeometry, planeMaterial);
+    // Plane Add Shadow.
+    plane.receiveShadow = true;
+    // Rotate and Position the Plane.
+    plane.rotation.x = 1;
+    plane.position.x = 1;
+    plane.position.y = 1;
+    plane.position.z = 1;
+    // Add Plane.
+    scene.add(plane);
+
+    // Create Sphere.
+    var range = 5;
+    var stepX = 10;
+
+    setTimeout(function () {
+
+      setInterval(function () {
+
+        var sphere = new THREE.Mesh(new THREE.SphereGeometry(4, 50, 50), new THREE.MeshPhongMaterial({
+          color: scale(Math.random()).hex(),
+          transparent: true,
+          opacity: 1
+        }));
+
+        var startPosi = Math.floor(Math.random() * 6) + -2;
+        console.log(startPosi);
+        sphere.position.x = startPosi * stepX + (Math.random() - 0.5) * range;
+        sphere.position.y = -80;
+        sphere.position.z = -800;
+        sphere.castShadow = true;
+        scene.add(sphere);
+      }, 500);
+    }, 5000);
+
+    // Add Parallel Light Source.
+    var directionalLight = new THREE.DirectionalLight(0xffffff);
+    directionalLight.position.set(10, 10, 10);
+    scene.add(directionalLight);
+
+    // Add Subtle Ambient Lighting
+    var ambientLight = new THREE.AmbientLight(0x0c0c0c);
+    scene.add(ambientLight);
+
+    // Add Spotlight for the Shadows
+    var spotLight = new THREE.SpotLight(0xffffff);
+    spotLight.position.set(10, 10, 10);
+    spotLight.castShadow = true;
+    scene.add(spotLight);
+
+    // Sort Added Scene.
+    renderer.sortObjects = false;
+
+    // Variable for Creating Camera.
+    var camera = new THREE.PerspectiveCamera(45, BW / BH, 0.1, 100000);
+
+    // Position and Point the Camera.
+    camera.position.x = 0;
+    camera.position.y = 0;
+    camera.position.z = 0;
+    camera.lookAt(scene.position);
+    //camera.lookAt({ x: 0, y: 0, z: 0 });
+
+    // Add Canvas to <body>.
+    document.getElementById('sample5').appendChild(renderer.domElement);
+
+    // Add dat.GUI.
+    var controls = new function () {
+      this.DirectionX = 0;
+      this.DirectionY = 0.6;
+      this.DirectionZ = 6;
+    }();
+    var gui = new dat.GUI();
+    gui.add(controls, 'DirectionX', -5, 5);
+    gui.add(controls, 'DirectionY', 0.6, 22);
+    gui.add(controls, 'DirectionZ', 0, 6);
+
+    render();
+
+    // Sphere Bounce Function.
+    function render() {
+      // Stats Up Date.
+      stats.update();
+
+      scene.traverse(function (e) {
+        if (e instanceof THREE.Mesh) {
+          e.position.x += controls.DirectionX;
+          e.position.y += controls.DirectionY;
+          e.position.z += controls.DirectionZ;
+        }
+      });
+      // render using requestAnimationFrame
+      requestAnimationFrame(render);
+      renderer.render(scene, camera);
+    }
+
+    // Stats Function.
+    function initStats() {
+      var stats = new Stats();
+      // 0: fps, 1: ms
+      stats.setMode(0);
+      stats.domElement.style.position = 'absolute';
+      stats.domElement.style.left = '0px';
+      stats.domElement.style.top = '0px';
+      document.querySelector('stats').appendChild(stats.domElement);
+      return stats;
+    }
+
+    // Responsive Function.
+    var windowResize = function windowResize() {
+      // Get <body></body> Width & Height.
+      var BW = document.body.clientWidth,
+          BH = document.body.clientHeight;
+      camera.aspect = BW / BH;
+      camera.updateProjectionMatrix();
+      renderer.setSize(BW, BH);
+    };
+
+    // If Window Resize, Start Up windowResize();
+    window.addEventListener('resize', windowResize, false);
+  };
+
+  window.addEventListener('DOMContentLoaded', draw, false);
+}
+
+/***/ }),
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -60284,7 +60508,7 @@ return jQuery;
 
 
 /***/ }),
-/* 20 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60293,16 +60517,18 @@ return jQuery;
 // Riot JS Script. /////////////////////////////////////////////////////////////
 var riot = __webpack_require__(0);
 
-__webpack_require__(10);
-__webpack_require__(14);
 __webpack_require__(11);
+__webpack_require__(16);
+__webpack_require__(12);
 __webpack_require__(5);
 __webpack_require__(6);
 __webpack_require__(7);
 __webpack_require__(8);
-__webpack_require__(12);
-__webpack_require__(4);
 __webpack_require__(9);
+__webpack_require__(14);
+__webpack_require__(4);
+__webpack_require__(10);
+__webpack_require__(15);
 __webpack_require__(13);
 //require('../tags/default.tag');
 
@@ -60311,17 +60537,18 @@ riot.mount('*');
 
 
 // Require Three JS Script. ////////////////////////////////////////////////////
-__webpack_require__(15);
-__webpack_require__(16);
 __webpack_require__(17);
 __webpack_require__(18);
+__webpack_require__(19);
+__webpack_require__(20);
+__webpack_require__(21);
 // Three JS Script End. ////////////////////////////////////////////////////////
 
 
 // jQuery Script. //////////////////////////////////////////////////////////////
 'use strict';
 
-var jQuery = __webpack_require__(19);
+var jQuery = __webpack_require__(22);
 
 jQuery(function ($) {
 
@@ -60364,7 +60591,7 @@ jQuery(function ($) {
 
   // Sample2.html & Sample3.html List Font Color => #fffff;
   function addTextColor() {
-    if ($('body').attr('id') === 'sample2' || $('body').attr('id') === 'sample3' || $('body').attr('id') === 'sample4') {
+    if ($('body').attr('id') === 'sample2' || $('body').attr('id') === 'sample3' || $('body').attr('id') === 'sample4' || $('body').attr('id') === 'sample5') {
       $('list a, axis-helper').addClass('textWhite');
     }
   }
@@ -60401,7 +60628,7 @@ jQuery(function ($) {
 // jQuery Script End. //////////////////////////////////////////////////////////
 
 /***/ }),
-/* 21 */
+/* 24 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
