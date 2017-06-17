@@ -49359,7 +49359,7 @@ riot.tag2('list', '<ul> <li each="{lists}"><a href="{path}">{course} <span>To</s
 "use strict";
 /* WEBPACK VAR INJECTION */(function(riot) {
 
-riot.tag2('not-completed', '<p>Not Completed!!!</p>', 'not-completed,[data-is="not-completed"]{ position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: 0; display: flex; justify-content: center; align-items: center; } not-completed p,[data-is="not-completed"] p{ font-size: 5em; font-weight: bold; color: #fff; text-shadow: 5px 5px 3px #000; } @media screen and (max-width: 1024px) { not-completed p,[data-is="not-completed"] p{ font-size: 6.5em; } } @media screen and (max-width: 1024px) and (orientation: landscape) { not-completed p,[data-is="not-completed"] p{ font-size: 7.5em; } }', '', function (opts) {});
+riot.tag2('not-completed', '<p><span>N</span><span>o</span><span>t</span><span>&nbsp;</span><span>C</span><span>o</span><span>m</span><span>p</span><span>l</span><span>e</span><span>t</span><span>e</span><span>d</span><span>!</span><span>!</span><span>!</span></p>', 'not-completed,[data-is="not-completed"]{ position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: 0; display: flex; justify-content: center; align-items: center; } not-completed p span,[data-is="not-completed"] p span{ font-size: 5em; font-weight: bold; color: #fff; text-shadow: 5px 5px 3px #000; display: inline-block; transform: rotateY(90deg); transition: transform 0.5s; } not-completed p span.rotate,[data-is="not-completed"] p span.rotate{ transform: rotateY(0deg); transition: transform 0.5s; } @media screen and (max-width: 1024px) { not-completed p span,[data-is="not-completed"] p span{ font-size: 6.5em; } } @media screen and (max-width: 1024px) and (orientation: landscape) { not-completed p span,[data-is="not-completed"] p span{ font-size: 7.5em; } }', '', function (opts) {});
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
@@ -60515,15 +60515,20 @@ jQuery(function ($) {
   }
   addTextColor();
 
-  // Heading1 Animations.
-  function headingDrop() {
+  // Text Animations.
+  function textAnimaions() {
     $('body#list h1 span, body#sorry h1 span').delay(250).each(function (index) {
       $(this).delay(index * 50).queue(function () {
         $(this).addClass('down').dequeue();
       });
     });
+    $('body#sample5 not-completed p span').delay(2000).each(function (index) {
+      $(this).delay(index * 25).queue(function () {
+        $(this).addClass('rotate').dequeue();
+      });
+    });
   }
-  headingDrop();
+  textAnimaions();
 
   // Basic Animations.
   function commonFadeIn() {

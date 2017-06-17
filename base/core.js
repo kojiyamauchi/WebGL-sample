@@ -81,15 +81,20 @@ jQuery(function ($) {
   }
   addTextColor();
 
-  // Heading1 Animations.
-  function headingDrop() {
+  // Text Animations.
+  function textAnimaions() {
     $('body#list h1 span, body#sorry h1 span').delay(250).each(function (index) {
       $(this).delay(index * 50).queue(function () {
         $(this).addClass('down').dequeue();
       });
     });
+    $('body#sample5 not-completed p span').delay(2000).each(function (index) {
+      $(this).delay(index * 25).queue(function () {
+        $(this).addClass('rotate').dequeue();
+      });
+    });
   }
-  headingDrop();
+  textAnimaions();
 
   // Basic Animations.
   function commonFadeIn() {
