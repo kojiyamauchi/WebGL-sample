@@ -18,7 +18,10 @@
         left: 0;
         z-index: -1;
         opacity: 0;
-
+        @media screen and (orientation: portrait) {
+          background-position: center 30px;
+          background-color: #ffffff;
+        }
       }
       </style>
       <!-- CSS End. -->

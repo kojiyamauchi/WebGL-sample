@@ -49289,7 +49289,7 @@ riot.tag2('bg4', '', 'bg4,[data-is="bg4"]{ background-image: url("images/bg4.jpg
 "use strict";
 /* WEBPACK VAR INJECTION */(function(riot) {
 
-riot.tag2('bg5', '', 'bg5,[data-is="bg5"]{ background-image: url("images/bg5.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1; opacity: 0; }', 'class="{bg: true}"', function (opts) {});
+riot.tag2('bg5', '', 'bg5,[data-is="bg5"]{ background-image: url("images/bg5.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1; opacity: 0; } @media screen and (orientation: portrait) { bg5,[data-is="bg5"]{ background-position: center 30px; background-color: #ffffff; } }', 'class="{bg: true}"', function (opts) {});
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
