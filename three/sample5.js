@@ -56,7 +56,6 @@ if(document.getElementById('sample5')) {
     // Plane Add Shadow.
     plane.receiveShadow = true;
     // Rotate and Position the Plane.
-    plane.rotation.x = 1;
     plane.position.x = 1;
     plane.position.y = 1;
     plane.position.z = 1;
