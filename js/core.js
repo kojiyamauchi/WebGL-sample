@@ -49698,6 +49698,8 @@ if (document.getElementById('sample2')) {
     spotLight.castShadow = true;
     scene.add(spotLight);
 
+    scene.fog = new THREE.Fog(0xffffff, 0.1, 1000);
+
     // Sort Added Scene.
     renderer.sortObjects = false;
 
@@ -50172,6 +50174,10 @@ if (document.getElementById('sample5')) {
     spotLight.position.set(10, 10, 10);
     spotLight.castShadow = true;
     scene.add(spotLight);
+
+    // Add Fog.
+    //scene.fog = new THREE.Fog(0xffffff, 0.1, 1000);
+    //scene.fog = new THREE.FogExp2(0xffffff, 0.1);
 
     // Sort Added Scene.
     renderer.sortObjects = false;

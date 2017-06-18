@@ -108,6 +108,10 @@ if(document.getElementById('sample5')) {
     spotLight.castShadow = true;
     scene.add(spotLight);
 
+    // Add Fog.
+    //scene.fog = new THREE.Fog(0xffffff, 0.1, 1000);
+    //scene.fog = new THREE.FogExp2(0xffffff, 0.1);
+
     // Sort Added Scene.
     renderer.sortObjects = false;
 
