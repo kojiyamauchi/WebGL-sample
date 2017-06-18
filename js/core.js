@@ -50164,8 +50164,8 @@ if (document.getElementById('sample5')) {
     scene.add(directionalLight);
 
     // Add Subtle Ambient Lighting
-    var ambientLight = new THREE.AmbientLight(0x0c0c0c);
-    scene.add(ambientLight);
+    //var ambientLight = new THREE.AmbientLight(0x0c0c0c);
+    //scene.add(ambientLight);
 
     // Add Spotlight for the Shadows
     var spotLight = new THREE.SpotLight(0xffffff);
@@ -50224,7 +50224,7 @@ if (document.getElementById('sample5')) {
     function initStats() {
       var stats = new Stats();
       // 0: fps, 1: ms
-      stats.setMode(0);
+      stats.setMode(1);
       stats.domElement.style.position = 'absolute';
       stats.domElement.style.left = '0px';
       stats.domElement.style.top = '0px';
