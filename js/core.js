@@ -50137,8 +50137,9 @@ if (document.getElementById('sample5')) {
     var range = 5;
     var stepX = 10;
 
+    // Delay.
     setTimeout(function () {
-
+      // Loop.
       setInterval(function () {
 
         var sphere = new THREE.Mesh(new THREE.SphereGeometry(4, 50, 50), new THREE.MeshPhongMaterial({
@@ -50147,6 +50148,7 @@ if (document.getElementById('sample5')) {
           opacity: 1
         }));
 
+        // Sphere Start Position Random.
         var startPosi = Math.floor(Math.random() * 6) + -2;
         console.log(startPosi);
         sphere.position.x = startPosi * stepX + (Math.random() - 0.5) * range;
@@ -50194,6 +50196,7 @@ if (document.getElementById('sample5')) {
       this.DirectionY = 0.6;
       this.DirectionZ = 6;
     }();
+
     var gui = new dat.GUI();
     gui.add(controls, 'DirectionX', -5, 5);
     gui.add(controls, 'DirectionY', 0.6, 22);
@@ -50201,7 +50204,7 @@ if (document.getElementById('sample5')) {
 
     render();
 
-    // Sphere Bounce Function.
+    // Sphere Position Control Function.
     function render() {
       // Stats Up Date.
       stats.update();
