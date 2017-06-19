@@ -49249,7 +49249,7 @@ riot.tag2('axis-helper', '<dl> <dt>Axis Helper Description.</dt> <dd>&#9642;&nbs
 "use strict";
 /* WEBPACK VAR INJECTION */(function(riot) {
 
-riot.tag2('bg1', '', 'bg1,[data-is="bg1"]{ background-image: url("images/bg1.jpg"); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1; opacity: 0; }', 'class="{bg: true}"', function (opts) {});
+riot.tag2('bg1', '', 'bg1,[data-is="bg1"]{ background-image: url("images/bg1.jpg"); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1; display: none; }', 'class="{bg: true}"', function (opts) {});
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
@@ -49259,7 +49259,7 @@ riot.tag2('bg1', '', 'bg1,[data-is="bg1"]{ background-image: url("images/bg1.jpg
 "use strict";
 /* WEBPACK VAR INJECTION */(function(riot) {
 
-riot.tag2('bg2', '', 'bg2,[data-is="bg2"]{ background-image: url("images/bg2.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1; opacity: 0; } @media screen and (max-width: 1024px) and (orientation: portrait) { bg2,[data-is="bg2"]{ background-position: 50%,0; } }', 'class="{bg: true}"', function (opts) {});
+riot.tag2('bg2', '', 'bg2,[data-is="bg2"]{ background-image: url("images/bg2.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1; display: none; } @media screen and (max-width: 1024px) and (orientation: portrait) { bg2,[data-is="bg2"]{ background-position: 50%,0; } }', 'class="{bg: true}"', function (opts) {});
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
@@ -49269,7 +49269,7 @@ riot.tag2('bg2', '', 'bg2,[data-is="bg2"]{ background-image: url("images/bg2.jpg
 "use strict";
 /* WEBPACK VAR INJECTION */(function(riot) {
 
-riot.tag2('bg3', '', 'bg3,[data-is="bg3"]{ background-image: url("images/bg3.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1; opacity: 0; }', 'class="{bg: true}"', function (opts) {});
+riot.tag2('bg3', '', 'bg3,[data-is="bg3"]{ background-image: url("images/bg3.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1; display: none; }', 'class="{bg: true}"', function (opts) {});
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
@@ -49279,7 +49279,7 @@ riot.tag2('bg3', '', 'bg3,[data-is="bg3"]{ background-image: url("images/bg3.jpg
 "use strict";
 /* WEBPACK VAR INJECTION */(function(riot) {
 
-riot.tag2('bg4', '', 'bg4,[data-is="bg4"]{ background-image: url("images/bg4.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1; opacity: 0; }', 'class="{bg: true}"', function (opts) {});
+riot.tag2('bg4', '', 'bg4,[data-is="bg4"]{ background-image: url("images/bg4.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1; display: none; }', 'class="{bg: true}"', function (opts) {});
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
@@ -49289,7 +49289,7 @@ riot.tag2('bg4', '', 'bg4,[data-is="bg4"]{ background-image: url("images/bg4.jpg
 "use strict";
 /* WEBPACK VAR INJECTION */(function(riot) {
 
-riot.tag2('bg5', '', 'bg5,[data-is="bg5"]{ background-image: url("images/bg5.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1; opacity: 0; } @media screen and (orientation: portrait) { bg5,[data-is="bg5"]{ background-position: center 30px; background-color: #ffffff; } }', 'class="{bg: true}"', function (opts) {});
+riot.tag2('bg5', '', 'bg5,[data-is="bg5"]{ background-image: url("images/bg5.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center; width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: -1; display: none; } @media screen and (orientation: portrait) { bg5,[data-is="bg5"]{ background-position: center 30px; background-color: #ffffff; } }', 'class="{bg: true}"', function (opts) {});
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
@@ -60542,13 +60542,13 @@ jQuery(function ($) {
       $('body.sample').fadeTo(2000, 1);
       setTimeout(function () {
         $('body.sample list ul li').addClass('rotate');
-        $('body.sample .bg').fadeTo(3000, 1);
+        $('body.sample .bg').fadeIn(3000);
       }, 3000);
     } else if ($('body').attr('id') === 'sample4') {
       $('body.sample').fadeTo(2000, 1);
       setTimeout(function () {
         $('body.sample list ul li').addClass('rotate');
-        $('body.sample .bg').delay(1300).fadeTo(3000, 1);
+        $('body.sample .bg').delay(1300).fadeIn(3000);
       }, 3350);
     }
   }

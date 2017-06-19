@@ -17,7 +17,7 @@
         top: 0;
         left: 0;
         z-index: -1;
-        opacity: 0;
+        display: none;
         @media screen and (orientation: portrait) {
           background-position: center 30px;
           background-color: #ffffff;

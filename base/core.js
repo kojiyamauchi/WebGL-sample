@@ -102,13 +102,13 @@ jQuery(function ($) {
       $('body.sample').fadeTo(2000, 1);
       setTimeout(function () {
         $('body.sample list ul li').addClass('rotate');
-        $('body.sample .bg').fadeTo(3000, 1);
+        $('body.sample .bg').fadeIn(3000);
       }, 3000);
     } else if($('body').attr('id') === 'sample4') {
       $('body.sample').fadeTo(2000, 1);
       setTimeout(function () {
         $('body.sample list ul li').addClass('rotate');
-        $('body.sample .bg').delay(1300).fadeTo(3000, 1);
+        $('body.sample .bg').delay(1300).fadeIn(3000);
       }, 3350);
     }
   }
