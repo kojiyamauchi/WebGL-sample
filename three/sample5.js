@@ -5,6 +5,8 @@ var THREE = require('three'),
   // Require Color JS Library.
   chroma = require('chroma-js');
 
+import 'imports-loader?THREE=three!../node_modules/three/examples/js/controls/TrackballControls';
+
 if(document.getElementById('sample5')) {
 
   var draw = function () {
@@ -21,6 +23,9 @@ if(document.getElementById('sample5')) {
 
     // Using chrome-js.
     var scale = chroma.scale(['#adc851', '#feda3f', '#8141bf', '#1f6931', '#346ac6', '#e8574d', ]);
+
+    // Variable THREE.clock();
+    var clock = new THREE.Clock();
 
     // Add Stats.
     var stats = initStats();
@@ -125,6 +130,17 @@ if(document.getElementById('sample5')) {
     camera.lookAt(scene.position);
     //camera.lookAt({ x: 0, y: 0, z: 0 });
 
+    // Using trackballControls.
+    // var trackballControls = new THREE.TrackballControls(camera);
+
+    // trackballControls.rotateSpeed = 1.0;
+    // trackballControls.zoomSpeed = 1.0;
+    // trackballControls.panSpeed = 1.0;
+    // trackballControls.noZoom=false;
+    // trackballControls.noPan=false;
+    // trackballControls.staticMoving = true;
+    // trackballControls.dynamicDampingFactor=0.3;
+
     // Add Canvas to <body>.
     document.getElementById('sample5').appendChild(renderer.domElement);
 
@@ -147,6 +163,8 @@ if(document.getElementById('sample5')) {
       // Stats Up Date.
       stats.update();
 
+      // var delta = clock.getDelta();
+
       scene.traverse(function (e) {
         if(e instanceof THREE.Mesh) {
           e.position.x += controls.DirectionX;
@@ -154,6 +172,9 @@ if(document.getElementById('sample5')) {
           e.position.z += controls.DirectionZ;
         }
       });
+
+      // trackballControls.update(delta);
+
       // render using requestAnimationFrame
       requestAnimationFrame(render);
       renderer.render(scene, camera);
