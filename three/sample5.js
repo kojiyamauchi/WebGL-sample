@@ -4,7 +4,7 @@ var THREE = require('three'),
   Stats = require('stats.js'),
   // Require Color JS Library.
   chroma = require('chroma-js');
-
+// Import TrackBackControls.js
 import 'imports-loader?THREE=three!../node_modules/three/examples/js/controls/TrackballControls';
 
 if(document.getElementById('sample5')) {
