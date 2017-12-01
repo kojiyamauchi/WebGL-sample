@@ -64,7 +64,7 @@ gulp.task('compressionImages', function () {
     .pipe(gulp.dest(compressionImageFold));
 });
 
-// sass compile.
+// sass compile & add vendor prefix automatically.
 gulp.task('sass', function () {
   gulp.src('sass/default.scss')
     .pipe(plumber())
@@ -72,17 +72,11 @@ gulp.task('sass', function () {
     .pipe(sass({
       outputStyle: 'expanded'
     }))
-    .pipe(sourcemaps.write('../maps'))
-    .pipe(gulp.dest('css/'));
-});
-
-// add vendor prefix automatically.
-gulp.task('autoprefixer', function () {
-  gulp.src('css/default.css')
     .pipe(autoprefixer({
       browsers: ['last 2 versions', 'ie >= 9', 'Android >= 4', 'ios_saf >= 8'],
       cascade: false
     }))
+    .pipe(sourcemaps.write('../maps'))
     .pipe(gulp.dest('css/'));
 });
 
@@ -152,8 +146,7 @@ gulp.task('default', ['browserSync'], function () { // first task, local server 
   gulp.watch(['base/*', 'tags/*', 'three/*'], ['webpack']); // JS File webpack.
   gulp.watch(['plugins/*.js', 'js/_core.js'], ['concat']); // JS File Concatenate.
   gulp.watch('js/core.js', ['jsmin']); // watching change's JS flie, File Compression.
-  gulp.watch('sass/default.scss', ['sass']); // watching sass file save's auto compile.
-  gulp.watch('css/default.css', ['autoprefixer']); // watching change's CSS flie. add vendor prefix automatically.
+  gulp.watch('sass/default.scss', ['sass']); // watching sass file save's auto compile & add vendor prefix automatically.
   gulp.watch('css/default.css', ['cssmin']); // watching change's CSS flie, File Compression.
   gulp.watch(noCompressionImagesFold, ['compressionImages']); // watching noCompressionImages fold changed images, compression images.
   //gulp.watch('**/*', ['rename']); // watching change's HTML flie. Rename PHP file.

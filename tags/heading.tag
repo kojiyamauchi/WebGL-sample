@@ -2,7 +2,7 @@
     <heading>
 
       <!-- Insert Components / Layout -->
-      <h1><span>S</span><span>t</span><span>u</span><span>d</span><span>y</span><span>i</span><span>n</span><span>g</span>&nbsp;&nbsp;<span>N</span><span>o</span><span>w</span><span>.</span></h1>
+      <h1><span>I</span><span>n</span><span>d</span><span>e</span><span>x</span><span>.</span></h1>
       <!-- Insert Components End. -->
 
       <!-- CSS Definition. Using Sass. -->
