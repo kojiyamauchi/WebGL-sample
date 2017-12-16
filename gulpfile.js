@@ -19,7 +19,6 @@ var gulp = require('gulp'), // call gulp.
   del = require('del'), // File Delete, Not Gulp PlugIn.
   ftp = require('vinyl-ftp'), // ftp plugin.
   sftp = require('gulp-sftp'), // sftp plugin.
-  using_PHP_LocalServerConnect = require('gulp-connect-php'), // using php local server connect plugin.
   browserSync = require('browser-sync'), // local browser sync plugin.
   upLoadFileWrite = (['*.html', 'css/default.min.css', 'js/core.min.js', 'images/*']), // upload file write.
   notUpLoadFileWrite = ([]), // don't upload file write.
@@ -106,16 +105,13 @@ gulp.task('delete', function (cb) {
 
 // local browser connect & sync.
 gulp.task('browserSync', function () {
-  using_PHP_LocalServerConnect.server({
-    port: 8080,
-    bin: '/Applications/MAMP/bin/php/php5.6.10/bin/php', // PHP pass.
-    ini: '/Applications/MAMP/bin/php/php5.6.10/conf/php.ini' // PHP.ini pass.
-  }, function () {
-    browserSync({
-      proxy: 'localhost:8080',
-      notify: false,
-      browser: 'google chrome'
-    });
+  return browserSync({
+    browser: 'google chrome',
+    notify: false,
+    server: {
+      baseDir: '.',
+      index: 'index.html'
+    }
   });
 });
 
