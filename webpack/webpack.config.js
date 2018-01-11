@@ -1,4 +1,4 @@
-var webpack = require('webpack');
+const webpack = require('webpack')
 
 module.exports = {
   entry: './base/core.js',
@@ -8,30 +8,43 @@ module.exports = {
   },
   module: {
     rules: [
-    {
-      test: /\.tag$/,
-      enforce: 'pre',
-      exclude: /node_modules/,
-      use: [
+      // If Using Riot.js
       {
-        loader: 'riot-tag-loader',
-        options: {
-          debug: true
-        }
-      }]
-    },
-    {
-      test: /\.js|\.tag$/,
-      enforce: 'post',
-      exclude: /node_modules/,
-      use: [
+        test: /\.tag$/,
+        enforce: 'pre',
+        exclude: /node_modules/,
+        use: [
+        {
+          loader: 'riot-tag-loader',
+          options: {
+            debug: true
+          }
+        }]
+      },
       {
+        test: /\.js|\.tag$/,
+        enforce: 'post',
+        exclude: /node_modules/,
+        use: [
+        {
+          loader: 'babel-loader',
+          options: {
+            presets: 'es2015-riot'
+          }
+        }]
+      },
+      // If Using Riot.js End.
+      // ES6 Compile.
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
         loader: 'babel-loader',
-        options: {
-          presets: 'es2015-riot'
+        query: {
+          presets: ['es2015']
         }
-      }]
-    }]
+      }
+      // ES6 Compile End.
+    ]
   },
   resolve: {
     extensions: ['.js', '.tag']
@@ -41,4 +54,4 @@ module.exports = {
       riot: 'riot'
     })
   ]
-};
+}
