@@ -28,7 +28,7 @@ import '../three/sample3.js'
 import '../three/sample4.js'
 import '../three/sample5.js'
 
-// jQuery
+// jQuery Block.
 const jQuery = require('jQuery');
 
 jQuery(function ($) {
@@ -114,4 +114,3 @@ jQuery(function ($) {
   }
 
 });
-// jQuery Script End. //////////////////////////////////////////////////////////

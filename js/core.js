@@ -64926,7 +64926,7 @@ _riot2.default.mount('*');
 // Three Block.
 
 
-// jQuery
+// jQuery Block.
 var jQuery = __webpack_require__(148);
 
 jQuery(function ($) {
@@ -65011,7 +65011,6 @@ jQuery(function ($) {
     }
   }
 });
-// jQuery Script End. //////////////////////////////////////////////////////////
 
 /***/ }),
 /* 151 */
