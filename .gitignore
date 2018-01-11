@@ -1,5 +1,6 @@
 .DS_Store
-tag/default.tag
 sample/
 material/
-
+node_modules/
+three/tempThreeJS_code.js
+tags/default.tag
